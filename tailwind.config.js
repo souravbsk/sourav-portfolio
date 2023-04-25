@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        site: "url('./src/assets/site-bg.jpg')",
+        site: "url('/src/assets/site-bg.jpg')",
       },
       colors:{
         primary:"#0f0826",
