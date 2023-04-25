@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "title": "HTML",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png"
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png"
+    },
+    {
+      "id": 3,
+      "title": "Bootstrap",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_bootstrap_icon_130643.png"
+    },
+    {
+      "id": 4,
+      "title": "Tailwind",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130553.png"
+    },
+    {
+      "id": 5,
+      "title": "Sass",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_sass_icon_130182.png"
+    },
+    {
+      "id": 6,
+      "title": "React",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_reactjs_icon_130205.png"
+    },
+    {
+      "id": 7,
+      "title": "JavaScript",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_js_icon_130534.png"
+    },
+    {
+      "id": 8,
+      "title": "Firebase",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_firebase_icon_130732.png"
+    },
+    {
+      "id": 9,
+      "title": "Git",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_git_icon_130581.png"
+    },
+    {
+      "id": 10,
+      "title": "WordPress",
+      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_wordpress_icon_130266.png"
+    }
+  ]
+  

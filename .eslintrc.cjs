@@ -13,6 +13,7 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     "no-unused-vars":0,
     "react/jsx-no-target-blank":0,
-    "no-undef":0
+    "no-undef":0,
+    "react-hooks/rules-of-hooks":0
   },
 }
