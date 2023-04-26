@@ -13,7 +13,7 @@ console.log(skills);
       </div>
       <div>
         {
-          skills.map(skill => <Skill key={skill.id}></Skill>)
+          skills.map(skill => <Skill key={skill.id} skill={skill}></Skill>)
         }
       </div>
     </div>

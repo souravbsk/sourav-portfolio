@@ -47,7 +47,7 @@ const HeroSection = () => {
               <Tilt>
                 <img
                   src={heroImg}
-                  className="max-w-md w-full mx-auto flex-1 rounded-bl-[8rem] rounded-tr-[8rem] shadow-2xl"
+                  className="max-w-md border-4 border-secondary w-full mx-auto flex-1 rounded-bl-[8rem] rounded-tr-[8rem] shadow-2xl"
                 />
               </Tilt>
             </div>
