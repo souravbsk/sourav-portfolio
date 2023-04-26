@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Ema-Jhon website",
+    "description": "An online store for buying and selling products, built with React and Node.js.",
+    "image": "https://example.com/images/ecommerce.png",
+    "technology": ["React", "Node.js", "MongoDB"],
+    "liveLink": "https://example.com/ecommerce",
+    "gitLink": "https://github.com/example/ecommerce"
+  },
+  {
+    "id": 2,
+    "title": "Portfolio website",
+    "description": "A website to showcase your work and skills, built with HTML, CSS, and JavaScript.",
+    "image": "https://example.com/images/portfolio.png",
+    "technology": ["HTML", "CSS", "JavaScript"],
+    "liveLink": "https://example.com/portfolio",
+    "gitLink": "https://github.com/example/portfolio"
+  },
+  {
+    "id": 3,
+    "title": "Blog website",
+    "description": "A blog platform for writing and sharing articles, built with WordPress.",
+    "image": "https://example.com/images/blog.png",
+    "technology": ["WordPress"],
+    "liveLink": "https://example.com/blog",
+    "gitLink": "https://github.com/example/blog"
+  },
+  {
+    "id": 4,
+    "title": "Social media app",
+    "description": "A platform for connecting and communicating with friends, built with React Native and Firebase.",
+    "image": "https://example.com/images/social.png",
+    "technology": ["React Native", "Firebase"],
+    "liveLink": "https://example.com/social",
+    "gitLink": "https://github.com/example/social"
+  },
+  {
+    "id": 5,
+    "title": "Event management system",
+    "description": "A web application for managing events and bookings, built with Django and PostgreSQL.",
+    "image": "https://example.com/images/event.png",
+    "technology": ["Django", "PostgreSQL"],
+    "liveLink": "https://example.com/event",
+    "gitLink": "https://github.com/example/event"
+  },
+  {
+    "id": 6,
+    "title": "Recipe app",
+    "description": "An app for searching and saving recipes, built with React Native and Spoonacular API.",
+    "image": "https://example.com/images/recipe.png",
+    "technology": ["React Native", "Spoonacular API"],
+    "liveLink": "https://example.com/recipe",
+    "gitLink": "https://github.com/example/recipe"
+  },
+  {
+    "id": 7,
+    "title": "Fitness tracker",
+    "description": "A web app for tracking workouts and progress, built with Vue.js and Firebase.",
+    "image": "https://example.com/images/fitness.png",
+    "technology": ["Vue.js", "Firebase"],
+    "liveLink": "https://example.com/fitness",
+    "gitLink": "https://github.com/example/fitness"
+  },
+  {
+    "id": 8,
+    "title": "Online quiz",
+    "description": "A web app for creating and taking quizzes, built with Angular and Firebase.",
+    "image": "https://example.com/images/quiz.png",
+    "technology": ["Angular", "Firebase"],
+    "liveLink": "https://example.com/quiz",
+    "gitLink": "https://github.com/example/quiz"
+  }
+]
