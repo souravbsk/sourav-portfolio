@@ -8,7 +8,7 @@ const Skill = ({ skill }) => {
         <img
           src={icon}
           alt="Shoes"
-          className=" group-hover:scale-125 duration-300   px-2 py-2 w-20 h-20 object-contain"
+          className=" group-hover:scale-125 duration-300   px-2 py-2 w-24 h-24 object-contain"
         />
       </figure>
       <div className="card-body items-center text-center">
