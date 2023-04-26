@@ -3,20 +3,16 @@ import React from "react";
 const Skill = ({ skill }) => {
   const { id, icon, title } = skill;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card backdrop-blur-3xl hover:shadow-secondary group hover:scale-110 duration-300 rounded-lg border-2 border-secondary shadow-lg">
       <figure className="px-10 pt-10">
         <img
           src={icon}
           alt="Shoes"
-          className="rounded-xl"
+          className=" group-hover:scale-125 duration-300   px-2 py-2 w-20 h-20 object-contain"
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="card-actions">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 className="card-title">{title}</h2>
       </div>
     </div>
   );

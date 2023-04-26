@@ -2,52 +2,52 @@
     {
       "id": 1,
       "title": "HTML",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png"
+      "icon": "https://i.ibb.co/hHycBXt/pngwing-com.png"
     },
     {
       "id": 2,
       "title": "CSS",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png"
+      "icon": "https://i.ibb.co/SXz8yTX/pngwing-com-2.png"
     },
     {
       "id": 3,
       "title": "Bootstrap",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_bootstrap_icon_130643.png"
+      "icon": "https://i.ibb.co/x2CX54J/pngwing-com-7.png"
     },
     {
       "id": 4,
       "title": "Tailwind",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130553.png"
+      "icon": "https://i.ibb.co/8sWgvfN/pngwing-com-1.png"
     },
     {
       "id": 5,
       "title": "Sass",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_sass_icon_130182.png"
+      "icon": "https://i.ibb.co/8sqHRDS/pngwing-com-9.png"
     },
     {
       "id": 6,
-      "title": "React",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_reactjs_icon_130205.png"
+      "title": "JavaScript",
+      "icon": "https://i.ibb.co/2Z907ZQ/pngwing-com-4.png"
     },
     {
       "id": 7,
-      "title": "JavaScript",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_js_icon_130534.png"
+      "title": "React",
+      "icon": "https://i.ibb.co/ckFC86s/pngwing-com-3.png"
     },
     {
       "id": 8,
       "title": "Firebase",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_firebase_icon_130732.png"
+      "icon": "https://i.ibb.co/fNQL2Rf/pngwing-com-6.png"
     },
     {
       "id": 9,
       "title": "Git",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_git_icon_130581.png"
+      "icon": "https://i.ibb.co/PY6XLpk/pngwing-com-5.png"
     },
     {
       "id": 10,
       "title": "WordPress",
-      "icon": "https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_wordpress_icon_130266.png"
+      "icon": "https://i.ibb.co/yVdPzDM/pngwing-com-8.png"
     }
   ]
   
