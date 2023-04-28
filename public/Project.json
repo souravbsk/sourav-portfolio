@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Ema-Jhon website",
     "description": "An online store for buying and selling products, built with React and Node.js.",
-    "image": "https://example.com/images/ecommerce.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["React", "Node.js", "MongoDB"],
     "liveLink": "https://example.com/ecommerce",
     "gitLink": "https://github.com/example/ecommerce"
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Portfolio website",
     "description": "A website to showcase your work and skills, built with HTML, CSS, and JavaScript.",
-    "image": "https://example.com/images/portfolio.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["HTML", "CSS", "JavaScript"],
     "liveLink": "https://example.com/portfolio",
     "gitLink": "https://github.com/example/portfolio"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Blog website",
     "description": "A blog platform for writing and sharing articles, built with WordPress.",
-    "image": "https://example.com/images/blog.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["WordPress"],
     "liveLink": "https://example.com/blog",
     "gitLink": "https://github.com/example/blog"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Social media app",
     "description": "A platform for connecting and communicating with friends, built with React Native and Firebase.",
-    "image": "https://example.com/images/social.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["React Native", "Firebase"],
     "liveLink": "https://example.com/social",
     "gitLink": "https://github.com/example/social"
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Event management system",
     "description": "A web application for managing events and bookings, built with Django and PostgreSQL.",
-    "image": "https://example.com/images/event.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Django", "PostgreSQL"],
     "liveLink": "https://example.com/event",
     "gitLink": "https://github.com/example/event"
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "Recipe app",
     "description": "An app for searching and saving recipes, built with React Native and Spoonacular API.",
-    "image": "https://example.com/images/recipe.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["React Native", "Spoonacular API"],
     "liveLink": "https://example.com/recipe",
     "gitLink": "https://github.com/example/recipe"
@@ -57,7 +57,7 @@
     "id": 7,
     "title": "Fitness tracker",
     "description": "A web app for tracking workouts and progress, built with Vue.js and Firebase.",
-    "image": "https://example.com/images/fitness.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Vue.js", "Firebase"],
     "liveLink": "https://example.com/fitness",
     "gitLink": "https://github.com/example/fitness"
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "Online quiz",
     "description": "A web app for creating and taking quizzes, built with Angular and Firebase.",
-    "image": "https://example.com/images/quiz.png",
+    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Angular", "Firebase"],
     "liveLink": "https://example.com/quiz",
     "gitLink": "https://github.com/example/quiz"
