@@ -6,9 +6,9 @@ const Projects = () => {
   const projects = ProjectDataLoader();
   console.log(projects);
   return (
-    <div className="container py-24">
+    <div className="container pt-32">
       <div className="text-center">
-        <h2 className="text-5xl font-bold">My Projects</h2>
+        <h2 className="text-5xl font-bold text-white">My Projects</h2>
       </div>
       <div className="grid md:grid-cols-2 gap-7 mt-12">
         {projects.slice(0, 4).map((project) => (
@@ -16,7 +16,9 @@ const Projects = () => {
         ))}
       </div>
       <div className="text-center mt-12">
-        <button className="btn btn-primary shadow-md shadow-secondary">Explore More Projects</button>
+      <button className=" border-2 text-lg hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+      Explore More Projects
+                </button>
       </div>
     </div>
   );

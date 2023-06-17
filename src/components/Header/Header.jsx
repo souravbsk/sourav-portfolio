@@ -7,10 +7,10 @@ const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
 
   return (
-    <header className="fixed z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-xl shadow-secondary rounded-b-3xl">
+    <header className="fixed z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg shadow-[#9CACFB] rounded-b">
       <div className="container mx-auto flex items-center justify-between py-6">
-        <h1 className="text-3xl font-bold transform rotate-3 translate-y-4 animate-bounce">
-          Sourav B_s_k
+        <h1 className="text-lg md:text-3xl font-bold ">
+          Sourav Basak
         </h1>
         <nav className="space-x-4">
           <div className="block md:hidden">
@@ -23,8 +23,8 @@ const Header = () => {
           </div>
           <ul
             style={{ margin: "0" }}
-            className={`flex md:static absolute h-screen md:h-auto shadow-lg md:shadow-none shadow-secondary md:shadow-transparent px-16 py-10 md:py-0 md:px-0 bg-transparent backdrop-blur-md flex-col md:flex-row items-center top-20 duration-300 md:gap-8 gap-6 ${
-              navBarShow ? "right-0" : "-right-56"
+            className={`flex md:static absolute h-screen md:h-auto shadow-lg md:shadow-none shadow-[#9CACFB] md:shadow-transparent px-16 py-10 md:py-0 md:px-0 bg-transparent backdrop-blur-md flex-col md:flex-row items-center top-20 duration-300 md:gap-8 gap-6 ${
+              navBarShow ? "left-0" : "-left-56"
             } `}
           >
             <li>

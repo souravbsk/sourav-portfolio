@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 
 const Main = () => {
   return (
-    <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
+    <div className="bg-[#02132B] bg-no-repeat bg-cover overflow-hidden">
       <Header></Header>
       <main className="mt-24">
         <Outlet></Outlet>

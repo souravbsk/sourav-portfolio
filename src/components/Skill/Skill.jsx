@@ -3,7 +3,7 @@ import React from "react";
 const Skill = ({ skill }) => {
   const { id, icon, title } = skill;
   return (
-    <div className="card backdrop-blur-3xl hover:shadow-secondary group hover:scale-110 duration-300 rounded-lg border-2 border-secondary shadow-lg">
+    <div className="card backdrop-blur-3xl  hover:shadow-[#b5acff] group hover:scale-110 duration-300 rounded-lg border-2 border-[#aafaff] shadow-lg">
       <figure className="px-10 pt-10">
         <img
           src={icon}
@@ -12,7 +12,8 @@ const Skill = ({ skill }) => {
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title font-semibold bg-gradient-to-r from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400 ">{title}</h2>
       </div>
     </div>
   );
