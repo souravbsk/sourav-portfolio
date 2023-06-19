@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="space-x-4">
           <div className="block md:hidden">
             <button
-              className="text-xl bg-secondary px-2 rounded-md py-2"
+              className="text-xl bg-purple-400 px-2 rounded-md py-2"
               onClick={() => setNavbarShow(!navBarShow)}
             >
               {navBarShow ? <RxCross1></RxCross1> : <FaBars></FaBars>}

@@ -33,7 +33,7 @@ const Project = ({ project }) => {
       <div className="absolute group-hover:translate-y-0  translate-y-96 duration-500  flex flex-col justify-between py-4 bg-transparent backdrop-blur-xl left-0 top-0 right-0 bottom-0 px-5">
         <div>
           <p className="text-white text-sm">{description}</p>
-          <ul className="mt-3">
+          <ul className="mt-1">
             {technology.map((item, i) => (
               <span
                 key={i}

@@ -6,7 +6,7 @@ import SectionTitle from "../Shared/SectionTitle";
 
 const About = () => {
   return (
-    <div className="container  pt-32">
+    <div className="container pt-16  md:pt-32">
      <SectionTitle title="About Me"></SectionTitle>
       <div className="flex gap-8 flex-col md:flex-row justify-between items-center">
         <Tilt>
@@ -17,6 +17,7 @@ const About = () => {
           />
         </Tilt>
         <div className="flex-1 text-white">
+          <p className="text-sm md:text-base">
           I am a skilled web developer proficient in HTML, CSS, Bootstrap,
           Tailwind, JavaScript, React, React Router, Firebase, Express, MongoDB,
           Node.js, and WordPress. I create visually appealing, responsive, and
@@ -35,6 +36,7 @@ const About = () => {
           Please feel free to reach out to me, and I will be glad to provide you
           with a comprehensive solution tailored to your specific goals and
           objectives.
+          </p>
         </div>
       </div>
     </div>

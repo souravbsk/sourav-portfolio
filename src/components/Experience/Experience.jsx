@@ -9,8 +9,8 @@ import SectionTitle from "../Shared/SectionTitle";
 import { FaReact, FaWordpress } from "react-icons/fa";
 const Experience = () => {
   return (
-    <div className="container pt-32">
-      <div className="mb-12">
+    <div className="container pt-16 md:pt-32">
+      <div className="mb-6 md:mb-12">
 
       <SectionTitle title="Experience"></SectionTitle>
       </div>
