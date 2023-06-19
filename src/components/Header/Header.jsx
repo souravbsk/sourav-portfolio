@@ -7,7 +7,7 @@ const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
 
   return (
-    <header className="fixed z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg shadow-[#9CACFB] rounded-b">
+    <header className="fixed z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
       <div className="container mx-auto flex items-center justify-between py-6">
         <h1 className="text-lg md:text-3xl font-semibold  bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">

@@ -44,7 +44,7 @@ const ParticlesComponent = () => {
             },
             repulse: {
               distance: 200,
-              duration: 0.10,
+              duration: 0.6,
             },
           },
         },

@@ -10,7 +10,6 @@ const Main = () => {
     <div className="bg-[#02132B] bg-no-repeat bg-cover overflow-hidden">
       <Header></Header>
       <main className="mt-24">
-      <ParticlesComponent></ParticlesComponent>
         <Outlet></Outlet>
       </main>
       <Footer></Footer>

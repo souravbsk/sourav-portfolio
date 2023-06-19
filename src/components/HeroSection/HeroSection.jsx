@@ -3,6 +3,7 @@ import heroImg from "../../assets/Image/heroImg.png";
 import Typewriter from "typewriter-effect";
 import { FaDownload } from "react-icons/fa";
 import { Tilt } from "react-tilt";
+import CircleAnimation from "../CircleAnimation/CircleAnimation";
 
 const HeroSection = () => {
   return (
@@ -52,6 +53,9 @@ const HeroSection = () => {
                   className="max-w-md shadow-[#b5acff] border-4 border-[#aafaff] w-11/12 md:w-full mx-auto flex-1 md:rounded-bl-[8rem] md:rounded-tr-[8rem] rounded-bl-[6rem] rounded-tr-[6rem] shadow-md"
                 />
               </Tilt>
+             <div className="text-center">
+             <CircleAnimation></CircleAnimation>
+             </div>
             </div>
           </div>
         </div>

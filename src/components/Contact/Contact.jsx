@@ -1,10 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useRef } from 'react';
 import { FaHome, FaPhoneVolume } from "react-icons/fa";
 import {HiOutlineMailOpen} from "react-icons/hi"
 import { Link } from "react-router-dom";
-
+import ParticlesComponent from "../ParticlesComponent/ParticlesComponent";
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form);
+
+    emailjs.sendForm(import.meta.env.VITE_SEVICE_KEY, import.meta.env.VITE_TEMPLATE_KEY, form.current, import.meta.env.VITE_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <section className="pt-16 md:pt-32 container">
       <div data-aos="fade-left" className="flex flex-col md:flex-row gap-8 items-center justify-between">
@@ -53,7 +68,7 @@ const Contact = () => {
             inquiries you may have. I look forward to hearing from you
           </p>
 
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="mt-8">
               <div className="form-control mb-4">
                 <input
@@ -64,7 +79,7 @@ const Contact = () => {
                   className="input bg-transparent input-bordered"
                 />
               </div>
-              <div className="flex items-center mb-4 gap-4">
+              <div className="flex flex-col md:flex-row items-center mb-4 gap-4">
                 <div className="form-control w-full">
                   <input
                     type="email"
@@ -84,11 +99,20 @@ const Contact = () => {
                   />
                 </div>
               </div>
+              <div className="form-control mb-4">
+                <input
+                  type="text"
+                  required
+                  name="subject"
+                  placeholder="subject*"
+                  className="input bg-transparent input-bordered"
+                />
+              </div>
               <div className="form-control w-full">
                 <textarea
                   type="text"
                   required
-                  name="phone"
+                  name="message"
                   placeholder="Tell Us About Project"
                   className="input  bg-transparent p-5 resize-none  h-48 input-bordered w-full"
                 ></textarea>
@@ -101,6 +125,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
+      <ParticlesComponent></ParticlesComponent>
       </div>
     </section>
   );
