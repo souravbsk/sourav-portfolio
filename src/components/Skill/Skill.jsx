@@ -12,7 +12,7 @@ const Skill = ({ skill }) => {
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title font-semibold bg-gradient-to-r from-cyan-300 
+        <h2 className="card-title text-2xl font-semibold bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400 ">{title}</h2>
       </div>
     </div>

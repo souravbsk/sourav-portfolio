@@ -1,15 +1,14 @@
 import React from "react";
 import ProjectDataLoader from "../../Utilities/ProjectDataLoader";
 import Project from "../Project/Project";
+import SectionTitle from "../Shared/SectionTitle";
 
 const Projects = () => {
   const projects = ProjectDataLoader();
   console.log(projects);
   return (
     <div className="container pt-32">
-      <div className="text-center">
-        <h2 className="text-5xl font-bold text-white">My Projects</h2>
-      </div>
+     <SectionTitle title="My Projects"></SectionTitle>
       <div className="grid md:grid-cols-2 gap-7 mt-12">
         {projects.slice(0, 4).map((project) => (
           <Project key={project.id} project={project}></Project>

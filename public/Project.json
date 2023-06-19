@@ -1,21 +1,23 @@
 [
   {
     "id": 1,
-    "title": "Ema-Jhon website",
-    "description": "An online store for buying and selling products, built with React and Node.js.",
-    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-    "technology": ["React", "Node.js", "MongoDB"],
-    "liveLink": "https://example.com/ecommerce",
-    "gitLink": "https://github.com/example/ecommerce"
+    "title": "Game On Summer",
+    "description": "The website is built using the MERN stack with dashboard. It provides a platform where instructors can upload their classes, and students can purchase them. The website also integrates with Stripe to facilitate secure and convenient payment processing.",
+    "image": "https://i.ibb.co/h7prkQh/gameonsummer-web-app-crop2.png",
+    "technology": ["React","React-Router","Firebase","Express","JWT","cors", "dotenv","Tailwind","DaisyUI", "Node.js", "MongoDB","SwiperJS","StripeJs"],
+    "liveLink": "https://gameonsummer.web.app/",
+    "clientCodeLink": "https://github.com/souravbsk/gameonsummer-client-slide",
+    "serverCodeLink":"https://github.com/souravbsk/gameonsummer-server-side"
   },
   {
     "id": 2,
-    "title": "Portfolio website",
-    "description": "A website to showcase your work and skills, built with HTML, CSS, and JavaScript.",
-    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-    "technology": ["HTML", "CSS", "JavaScript"],
-    "liveLink": "https://example.com/portfolio",
-    "gitLink": "https://github.com/example/portfolio"
+    "title": "Super Hero Hub",
+    "description": "This MERN stack-based website is a superhero toy shop platform. Users can create an account to upload, delete, and update their own superhero toy listings. The website incorporates CRUD operations and enables users to manage their toy inventory effectively",
+    "image": "https://i.ibb.co/vm3cGrk/superherohub-f39e8-web-app-cut.png",
+    "technology": ["React","React-Router","Firebase","Express","lightgallery","JWT","cors", "dotenv", "Tailwind","DaisyUI", "MongoDB","SwiperJS","react-tabs"],
+    "liveLink": "https://superherohub-f39e8.web.app/",
+    "clientCodeLink": "https://github.com/souravbsk/superherohub-client-side",
+    "serverCodeLink":"https://github.com/souravbsk/superherohub-server-side"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["WordPress"],
     "liveLink": "https://example.com/blog",
-    "gitLink": "https://github.com/example/blog"
+    "clientCodeLink": "https://github.com/example/blog",
+    "serverCodeLink":""
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["React Native", "Firebase"],
     "liveLink": "https://example.com/social",
-    "gitLink": "https://github.com/example/social"
+    "clientCodeLink": "https://github.com/example/social",
+    "serverCodeLink":""
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Django", "PostgreSQL"],
     "liveLink": "https://example.com/event",
-    "gitLink": "https://github.com/example/event"
+    "clientCodeLink": "https://github.com/example/event",
+    "serverCodeLink":""
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["React Native", "Spoonacular API"],
     "liveLink": "https://example.com/recipe",
-    "gitLink": "https://github.com/example/recipe"
+    "clientCodeLink": "https://github.com/example/recipe",
+    "serverCodeLink":""
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Vue.js", "Firebase"],
     "liveLink": "https://example.com/fitness",
-    "gitLink": "https://github.com/example/fitness"
+    "clientCodeLink": "https://github.com/example/fitness",
+    "serverCodeLink":""
   },
   {
     "id": 8,
@@ -69,6 +76,7 @@
     "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "technology": ["Angular", "Firebase"],
     "liveLink": "https://example.com/quiz",
-    "gitLink": "https://github.com/example/quiz"
+    "clientCodeLink": "https://github.com/example/quiz",
+    "serverCodeLink":""
   }
 ]

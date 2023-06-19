@@ -2,13 +2,12 @@ import React from "react";
 import Lottie from "lottie-react";
 import codingImg from "../../assets/Image/about.json";
 import { Tilt } from "react-tilt";
+import SectionTitle from "../Shared/SectionTitle";
 
 const About = () => {
   return (
     <div className="container  pt-32">
-      <div className="text-center">
-        <h2 className="text-5xl font-bold">About Me</h2>
-      </div>
+     <SectionTitle title="About Me"></SectionTitle>
       <div className="flex gap-8 flex-col md:flex-row justify-between items-center">
         <Tilt>
           <Lottie

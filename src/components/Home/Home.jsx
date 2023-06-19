@@ -5,6 +5,7 @@ import WorkOverView from '../WorkOverView/WorkOverView';
 import Skilles from '../Skilles/Skilles';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
+import Experience from '../Experience/Experience';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <WorkOverView></WorkOverView>
             <Skilles></Skilles>
             <Projects></Projects>
+            <Experience></Experience>
             <Contact></Contact>
         </div>
     );
