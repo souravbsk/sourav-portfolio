@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
-import ParticlesComponent from "../components/ParticlesComponent/ParticlesComponent";
 
 const Main = () => {
  
@@ -13,7 +12,6 @@ const Main = () => {
         <Outlet></Outlet>
       </main>
       <Footer></Footer>
-      
     </div>
   );
 };

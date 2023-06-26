@@ -11,10 +11,10 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log(form);
-
     emailjs.sendForm(import.meta.env.VITE_SEVICE_KEY, import.meta.env.VITE_TEMPLATE_KEY, form.current, import.meta.env.VITE_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          
       }, (error) => {
           console.log(error.text);
       });
@@ -125,7 +125,6 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      <ParticlesComponent></ParticlesComponent>
       </div>
     </section>
   );

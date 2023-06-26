@@ -7,7 +7,7 @@ const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
 
   return (
-    <header className="fixed z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
+    <header className="fixed border-b border-slate-600 z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
       <div className="container mx-auto flex items-center justify-between py-6">
         <h1 className="text-lg md:text-3xl font-semibold  bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
@@ -25,31 +25,43 @@ const Header = () => {
           <ul
             style={{ margin: "0" }}
             className={`flex md:static absolute h-screen md:h-auto shadow-lg md:shadow-none shadow-[#9CACFB] md:shadow-transparent px-16 py-10 md:py-0 md:px-0 md:bg-transparent bg-[#02132B] backdrop-blur-md flex-col md:flex-row items-center top-20 duration-300 md:gap-8 gap-6 ${
-              navBarShow ? "left-0" : "-left-56"
+              navBarShow ? "left-0" : "-left-96"
             } `}
           >
             <li>
-              <Link to="/" className="font-semibold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-semibold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-semibold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Project
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-semibold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/add-project" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400">
+                Project add
+              </Link>
+            </li>
+            <li>
+              <Link to="/all-projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400">
+               All Projects
               </Link>
             </li>
           </ul>

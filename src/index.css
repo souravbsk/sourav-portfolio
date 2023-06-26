@@ -17,3 +17,47 @@ body {
 .vertical-timeline{
     padding: 0 !important;
 }
+
+.box{
+    background: url("./assets/Image/heroImg.png");
+    background-size: contain;
+
+    height: 400px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 5px 5px rgba(26, 39, 80, 0.644) ;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+
+.rti--container{
+   background-color: #02132B !important;
+}
+.rti--tag{
+    background-color: transparent !important;
+    border: 1px solid gainsboro;
+}
+
+@keyframes animate {
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+
+@media only screen and (max-width: 525px){
+	.box{
+        background: url("./assets/Image/heroImg.png");
+        background-size: contain;
+        height: 250px;
+        max-width: 250px;
+    }
+}

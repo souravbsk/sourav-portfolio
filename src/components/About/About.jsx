@@ -8,16 +8,18 @@ const About = () => {
   return (
     <div className="container pt-16  md:pt-32">
      <SectionTitle title="About Me"></SectionTitle>
-      <div className="flex gap-8 flex-col md:flex-row justify-between items-center">
+      <div  className="flex gap-8 flex-col md:flex-row justify-between items-center">
+        <div  data-aos="fade-right">
         <Tilt>
           <Lottie
-            className="flex-shrink"
+            className="flex-shrink md:w-10/12"
             animationData={codingImg}
             loop={true}
           />
         </Tilt>
-        <div className="flex-1 text-white">
-          <p className="text-sm md:text-base">
+        </div>
+        <div data-aos="fade-left" className="flex-1 text-white">
+          <p className="text-sm">
           I am a skilled web developer proficient in HTML, CSS, Bootstrap,
           Tailwind, JavaScript, React, React Router, Firebase, Express, MongoDB,
           Node.js, and WordPress. I create visually appealing, responsive, and

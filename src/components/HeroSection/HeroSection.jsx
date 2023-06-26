@@ -1,16 +1,18 @@
 import React from "react";
 import heroImg from "../../assets/Image/heroImg.png";
 import Typewriter from "typewriter-effect";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Tilt } from "react-tilt";
 import CircleAnimation from "../CircleAnimation/CircleAnimation";
+import { Link } from "react-router-dom";
+import resumePdf from "../../assets/Resume-pdf/React Js Developer Resume of sourav basak.pdf"
 
 const HeroSection = () => {
   return (
     <section className="container">
       <div>
-        <div className="pt-20">
-          <div className="flex gap-14 flex-col-reverse md:flex-row justify-between md:items-center w-full">
+        <div className="pt-5 md:pt-20">
+          <div className="flex gap-14 flex-col md:flex-row justify-between md:items-center w-full">
             <div className="text-white flex-1 space-y-3">
               <h6 className="text-xl md:text-3xl font-semibold">
                 Hey There <span className="animate-spin">👋🏻</span>
@@ -39,23 +41,22 @@ const HeroSection = () => {
               </h4>
 
               <div>
-                <button className=" border-2 text-lg hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]  mt-5 md:mt-10 flex items-center gap-3">
-                  <FaDownload className="text-[#b5acff]"></FaDownload>DownLoad Cv
-                </button>
+                <a href={resumePdf} download="sourav_resume.pdf"><button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]  mt-5 md:mt-10 flex items-center gap-3">
+                  <FaDownload className="text-[#b5acff]"></FaDownload>DownLoad Resume
+                </button></a>
  
+              </div>
+              <div>
+                <ul className="flex items-center mt-6 md:mt-12 gap-8">
+                  <li className="hover:-mt-5 duration-300"><Link to="https://github.com/souravbsk" target="_blank" className="text-3xl text-[#d3ceff]"><FaGithub></FaGithub></Link></li>
+                  <li className="hover:-mt-5 duration-300"><Link to="https://www.linkedin.com/in/souravbsk/" target="_blank" className="text-3xl text-[#d3ceff]"><FaLinkedin></FaLinkedin></Link></li>
+                  <li className="hover:-mt-5 duration-300"><Link to="https://www.facebook.com/sourav.Alien" target="_blank" className="text-3xl text-[#d3ceff]"><FaFacebook></FaFacebook></Link></li>
+                </ul>
               </div>
               
             </div>
-            <div className="flex-1">
-              <Tilt>
-                <img
-                  src={heroImg}
-                  className="max-w-md shadow-[#b5acff] border-4 border-[#aafaff] w-11/12 md:w-full mx-auto flex-1 md:rounded-bl-[8rem] md:rounded-tr-[8rem] rounded-bl-[6rem] rounded-tr-[6rem] shadow-md"
-                />
-              </Tilt>
-             <div className="text-center">
-             <CircleAnimation></CircleAnimation>
-             </div>
+            <div data-aos="zoom-in-up" className="flex-1">
+               <div className="box"></div>
             </div>
           </div>
         </div>
