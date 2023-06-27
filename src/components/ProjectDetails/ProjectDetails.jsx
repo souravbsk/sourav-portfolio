@@ -110,6 +110,12 @@ const ProjectDetails = () => {
       </Swiper>
     </div>
     </div>
+
+    <div className="mt-8 text-center">
+    <Link to="/"><button className=" border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+         Back To Home
+            </button></Link>
+    </div>
     </section>
   );
 };

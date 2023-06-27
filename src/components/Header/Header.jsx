@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
@@ -29,40 +30,40 @@ const Header = () => {
             } `}
           >
             <li>
-              <a href="/#home" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#home" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Home
-              </a>
+              </AnchorLink>
             </li>
             <li>
-              <a href="/#about" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#about" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 About
-              </a>
+              </AnchorLink>
             </li>
             <li>
-              <a href="/#skills" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#skills" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Skills
-              </a>
+              </AnchorLink>
             </li>
             <li>
-              <a href="/#projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Projects
-              </a>
+              </AnchorLink>
             </li>
             <li>
-              <a href="/#experience" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#experience" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Experience
-              </a>
+              </AnchorLink>
             </li>
             <li>
-              <a href="/#contact" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <AnchorLink href="#contact" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Contact
-              </a>
+              </AnchorLink>
             </li>
             
           </ul>
