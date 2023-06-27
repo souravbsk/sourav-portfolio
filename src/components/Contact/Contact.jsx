@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="pt-16 md:pt-32 container">
+    <section id='contact' className="pt-16 md:pt-32 container">
       <div data-aos="fade-left" className="flex flex-col md:flex-row gap-8 items-center justify-between">
         <div className="flex-1">
           <div className="flex flex-col md:flex-row mb-8 md:items-center gap-4">

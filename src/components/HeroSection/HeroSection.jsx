@@ -9,7 +9,7 @@ import resumePdf from "../../assets/Resume-pdf/React Js Developer Resume of sour
 
 const HeroSection = () => {
   return (
-    <section className="container">
+    <section className="container" id="home">
       <div>
         <div className="pt-5 md:pt-20">
           <div className="flex gap-14 flex-col md:flex-row justify-between md:items-center w-full">

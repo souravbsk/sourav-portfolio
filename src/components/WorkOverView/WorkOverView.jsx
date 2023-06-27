@@ -6,7 +6,7 @@ AOS.init();
 
 const WorkOverView = () => {
   return (
-    <div   className=" mt-16 md:mt-32">
+    <div  className=" mt-16 md:mt-32">
       <div
        data-aos="fade-up"
         className="container backdrop-brightness-150 bg-transparent py-12 px-5 rounded-2xl"

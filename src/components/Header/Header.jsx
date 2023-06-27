@@ -29,34 +29,40 @@ const Header = () => {
             } `}
           >
             <li>
-              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="#home" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="#about" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#skills" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
-                Project
-              </Link>
+                Skills
+              </a>
             </li>
             <li>
-              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="#projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#experience" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400">
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Contact
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
-            text-transparent  bg-clip-text  to-purple-400">
-                Contact
-              </Link>
+              </a>
             </li>
             
           </ul>

@@ -6,7 +6,7 @@ import SectionTitle from "../Shared/SectionTitle";
 
 const About = () => {
   return (
-    <div className="container pt-16  md:pt-32">
+    <div id="about" className="container pt-16  md:pt-32">
      <SectionTitle title="About Me"></SectionTitle>
       <div  className="flex gap-8 flex-col md:flex-row justify-between items-center">
         <div  data-aos="fade-right">
