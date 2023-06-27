@@ -64,7 +64,7 @@ const ProjectDetails = () => {
     <div className="mt-12 bg-[#020F22] p-5 border rounded-xl">
     <Swiper
         effect={"coverflow"}
-
+      
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={1}
@@ -92,14 +92,14 @@ const ProjectDetails = () => {
         loop={true}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        className="mySwiper "
       >
         {
             project?.projectSS.map((img,i) => <SwiperSlide key={i}>
 
 
 
-    <img className="w-full   rounded-3xl object-contain h-[600px]" src={img} />
+    <img className="w-full h-[700px]  object-contain rounded-3xl " src={img} />
 
 
 

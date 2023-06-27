@@ -8,7 +8,7 @@ const AllProjects = () => {
     const [reFetch,setRefetch] = useState(true)
   const [Projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch("https://sourav-portfolio-server.vercel.app/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
@@ -28,7 +28,7 @@ const AllProjects = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/projects/${id}`).then((data) => {
+        axios.delete(`https://sourav-portfolio-server.vercel.app/projects/${id}`).then((data) => {
           if (data.data.deletedCount > 0) {
             setRefetch(!reFetch)
             Swal.fire("Deleted!", "Your Project has been deleted.", "success");

@@ -2,6 +2,7 @@ import React from "react";
 import ProjectDataLoader from "../../Utilities/ProjectDataLoader";
 import Project from "../Project/Project";
 import SectionTitle from "../Shared/SectionTitle";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = ProjectDataLoader();
@@ -15,9 +16,9 @@ const Projects = () => {
         ))}
       </div>
       <div className="text-center mt-12">
-      <button className=" border-2 text-lg hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+     <Link to="/projects"> <button className=" border-2 text-lg hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
       Explore More Projects
-                </button>
+                </button></Link>
       </div>
     </div>
   );

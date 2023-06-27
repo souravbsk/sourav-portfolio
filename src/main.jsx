@@ -9,6 +9,7 @@ import AddAProject from './Dashboard/AddAProject.jsx'
 import AllProjects from './Dashboard/AllProjects.jsx'
 import UpdateProject from './Dashboard/UpdateProject.jsx'
 import ProjectDetails from './components/ProjectDetails/ProjectDetails.jsx'
+import ProjectPages from './components/ProjectPages/ProjectPages.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,16 +25,20 @@ const router = createBrowserRouter([
         element:<AddAProject></AddAProject>
       },
       {
-        path:"/all-projects",
+        path:"/projects",
+        element:<ProjectPages></ProjectPages>
+      },
+      {
+        path:"/dashboard/all-projects",
         element:<AllProjects></AllProjects>
       },{
-        path:"/update-project/:id",
+        path:"/dashboard/update-project/:id",
         element: <UpdateProject></UpdateProject>,
-        loader:({params}) => fetch(`http://localhost:5000/projects/${params.id}`)
+        loader:({params}) => fetch(`https://sourav-portfolio-server.vercel.app/projects/${params.id}`)
       },{
         path:"/projectDetail/:id",
         element: <ProjectDetails></ProjectDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/projects/${params.id}`)
+        loader:({params}) => fetch(`https://sourav-portfolio-server.vercel.app/projects/${params.id}`)
       }
     ]
   }

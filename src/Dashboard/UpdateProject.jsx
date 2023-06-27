@@ -59,7 +59,7 @@ const UpdateProject = () => {
             };
             console.log(newProject);
 
-            axios.post(`http://localhost:5000/projects/${projectData._id}`,newProject)
+            axios.post(`https://sourav-portfolio-server.vercel.app/projects/${projectData._id}`,newProject)
             .then(res => {
                 console.log(res);
               if(res.data.modifiedCount > 0){

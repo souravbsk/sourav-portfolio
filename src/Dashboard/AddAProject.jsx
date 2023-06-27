@@ -68,7 +68,7 @@ const AddAProject = () => {
           };
 
           axios
-            .post("http://localhost:5000/projects", newProject)
+            .post("https://sourav-portfolio-server.vercel.app/projects", newProject)
             .then((res) => {
               if (res.data.insertedId) {
                 form.reset();

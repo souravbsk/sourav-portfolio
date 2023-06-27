@@ -41,7 +41,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Project
               </Link>
@@ -53,17 +53,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/add-project" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <Link to="/" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
-                Project add
+                Contact
               </Link>
             </li>
-            <li>
-              <Link to="/all-projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
-            text-transparent  bg-clip-text  to-purple-400">
-               All Projects
-              </Link>
-            </li>
+            
           </ul>
         </nav>
       </div>

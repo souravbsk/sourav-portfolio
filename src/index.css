@@ -39,6 +39,15 @@ body {
     border: 1px solid gainsboro;
 }
 
+.swiper-slide-active{
+transform: scale(1.5) !important;
+}
+
+.react-tabs__tab--selected{
+    background-color: #020F22 !important;
+    color: white !important;
+}
+
 @keyframes animate {
     0%{
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
