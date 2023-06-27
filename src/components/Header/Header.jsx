@@ -29,13 +29,13 @@ const Header = () => {
             } `}
           >
             <li>
-              <a href="#home" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#home" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#about" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 About
               </a>
@@ -47,19 +47,19 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#projects" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#experience" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#experience" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Experience
               </a>
             </li>
             <li>
-              <a href="#contact" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+              <a href="/#contact" className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">
                 Contact
               </a>
