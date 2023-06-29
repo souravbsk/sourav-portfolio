@@ -41,11 +41,11 @@ const HeroSection = () => {
               </h4>
 
               <div className="flex  pt-5 md:pt-10 gap-3 flex-col md:flex-row">
-                <a href={resumePdf} download="sourav_resume.pdf"><button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3">
+                <Link className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
                   <FaDownload className="text-[#b5acff]"></FaDownload>DownLoad Resume
-                </button></a>
-                <Link to='https://drive.google.com/file/d/1jHuHoT-EEWHu-ODKiUMHIRXfrrp-bfjE/view' target="_blank">
-                <button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] flex items-center gap-3">
+               </Link>
+                <Link to='https://drive.google.com/file/d/1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd/view?usp=sharing' target="_blank">
+                <button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn rounded-3xl  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] flex items-center gap-3">
                   <FaEye className="text-[#b5acff]"></FaEye>View Resume
                 </button>
                 </Link>

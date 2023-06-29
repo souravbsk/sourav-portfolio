@@ -1,12 +1,15 @@
 import React from "react";
 import { FaArrowRight, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ProjectDetailsModal from "../ProjectDetailsModal/ProjectDetailsModal";
 
 const Project = ({ project }) => {
   console.log(project);
   const { title,  PhotoUrl,_id, description, skills,  clientLink, serverLink, liveLink } = project;
   return (
-    <Link to={`/projectDetail/${_id}`}>
+    // to={`/projectDetail/${_id}`}
+    <>
+    <label htmlFor={`my_modal_${_id}`}>
     <div data-aos="flip-up" className="flex h-80 md:h-72  cursor-pointer hover:shadow-lg hover:shadow-[#b5acff] overflow-hidden flex-col-reverse relative duration-300 md:flex-row group rounded-lg border border-[#aafaff] p-4 md:p-10 gap-8 items-center justify-between">
       <h2
         className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-cyan-300 
@@ -52,13 +55,14 @@ const Project = ({ project }) => {
         <Link to={serverLink}><button className=" border-2  text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
            server code
             </button></Link>
-        <Link to={`/projectDetail/${_id}`}><button className=" border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-         Project Details
-            </button></Link>
+            <label htmlFor={`my_modal_${_id}`} className="cursor-pointer border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">Project Details</label>
+
         </div>
       </div>
     </div>
-    </Link>
+    </label>
+    <ProjectDetailsModal id={_id} project={project}></ProjectDetailsModal>
+    </>
   );
 };
 

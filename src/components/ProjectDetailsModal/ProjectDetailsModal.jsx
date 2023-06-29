@@ -4,7 +4,6 @@ import SectionTitle from "../Shared/SectionTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
 import LightGallery from "lightgallery/react";
-
 // import styles
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
@@ -14,16 +13,25 @@ import lgZoom from "lightgallery/plugins/zoom";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+const ProjectDetailsModal = ({project,id}) => {
 
-const ProjectDetails = () => {
-  const project = useLoaderData();
-  console.log(project);
-  const onBeforeSlide = (detail) => {
-    const { index, prevIndex } = detail;
-  };
-
+    console.log(project);
+    const onBeforeSlide = (detail) => {
+      const { index, prevIndex } = detail;
+    };
+  
   return (
-    <section className="container mt-32 ">
+    <>
+      <input type="checkbox" id={`my_modal_${id}`} className="modal-toggle" />
+      <div className="modal">
+        <label htmlFor={`my_modal_${id}`} className="btn hover:border-[#aafaff] border-[#aafaff]   text-black text-2xl font-extrabold  bg-gradient-to-r rounded-3xl from-[#aafaff] to-[#b5acff]  btn-md btn-circle btn-ghost absolute right-0 md:right-24 z-50 top-5">✕</label>
+        <div className="modal-box  border w-full bg-transparent backdrop-blur-xl p-3 max-w-7xl">
+          
+
+
+{/* ________________ */}
+
+<section className="">
       <div className="card group md:h-[500px] lg:card-side overflow-hidden border bg-[#020F22] shadow-xl">
         <div className="flex-shrink-0">
           <img
@@ -76,10 +84,10 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      <div className="mt-8 md:mt-32">
+      <div className="mt-12">
         <SectionTitle title={`${project?.title} Screen Shots`}></SectionTitle>
 
-        <div className="mt-12 bg-[#020F22] p-5 border rounded-xl">
+        <div className="mt-8 bg-[#020F22] p-5 border rounded-xl">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -121,7 +129,7 @@ const ProjectDetails = () => {
              
                   <a target="_blank" href={img}>
                     <img
-                      className="w-full scale-[0.6] h-[500px] hover:object-bottom duration-1000 object-top object-cover rounded-3xl "
+                      className="w-full scale-[0.6] h-[500px]  object-top object-contain rounded-3xl "
                       src={img}
                     />
                   </a>
@@ -132,16 +140,17 @@ const ProjectDetails = () => {
           </Swiper>
         </div>
       </div>
-
-      <div className="mt-8 text-center">
-        <Link to="/">
-          <button className=" border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-            Back To Home
-          </button>
-        </Link>
-      </div>
     </section>
+{/* ___________ */}
+
+
+
+
+
+        </div>
+      </div>
+    </>
   );
 };
 
-export default ProjectDetails;
+export default ProjectDetailsModal;
