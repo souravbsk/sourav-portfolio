@@ -13,6 +13,7 @@ import lgZoom from "lightgallery/plugins/zoom";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 const ProjectDetailsModal = ({project,id}) => {
 
     console.log(project);
@@ -65,18 +66,18 @@ const ProjectDetailsModal = ({project,id}) => {
           <div className="card-actions mt-auto justify-end">
             <div className=" flex flex-wrap items-center gap-3">
               <Link target="_blank" to={project?.clientLink}>
-                <button className=" border-2 text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-                  client code
+                <button className=" flex items-center gap-2  border-2 text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+                <FaGithub className="text-white"></FaGithub> client code 
                 </button>
               </Link>
               <Link target="_blank" to={project?.serverLink}>
-                <button className=" border-2  text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-                  server code
+                <button className=" flex items-center gap-2  border-2  text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+                <FaGithub className="text-white"></FaGithub> server code
                 </button>
               </Link>
               <Link target="_blank" to={project?.liveLink}>
-                <button className=" border-2 text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-                  Live Link
+                <button className=" flex items-center gap-2 border-2 text-base px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+                 Live Link  <FaExternalLinkAlt className="text-white"></FaExternalLinkAlt>
                 </button>
               </Link>
             </div>

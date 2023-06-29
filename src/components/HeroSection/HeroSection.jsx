@@ -5,9 +5,20 @@ import { FaDownload, FaEye, FaFacebook, FaGithub, FaLinkedin, FaStackOverflow } 
 import { Tilt } from "react-tilt";
 import CircleAnimation from "../CircleAnimation/CircleAnimation";
 import { Link } from "react-router-dom";
-import resumePdf from "../../assets/Resume-pdf/React Js Developer Resume of sourav basak.pdf"
+// import resumePdf from "../../assets/Resume-pdf/React Js Developer Resume of sourav basak.pdf"
 
 const HeroSection = () => {
+
+
+
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/Full Stack Developer Resume of sourav basak.pdf";
+    downloadLink.download = "Full Stack Developer Resume of sourav basak.pdf";
+    downloadLink.click();
+  };
+
+
   return (
     <section className="container" id="home">
       <div>
@@ -41,9 +52,10 @@ const HeroSection = () => {
               </h4>
 
               <div className="flex  pt-5 md:pt-10 gap-3 flex-col md:flex-row">
-                <Link className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
+            
+                <button  onClick={handleDownload} className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
                   <FaDownload className="text-[#b5acff]"></FaDownload>DownLoad Resume
-               </Link>
+               </button>
                 <Link to='https://drive.google.com/file/d/1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd/view?usp=sharing' target="_blank">
                 <button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn rounded-3xl  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] flex items-center gap-3">
                   <FaEye className="text-[#b5acff]"></FaEye>View Resume
@@ -61,8 +73,13 @@ const HeroSection = () => {
               </div>
               
             </div>
-            <div data-aos="zoom-in-up" className="flex-1">
+            <div data-aos="zoom-in-up" className="flex-1 relative">
                <div className="box"></div>
+               <div className=" rounded-2xl text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] absolute -bottom-6 px-3 md:px-8 py-3  md:left-20 md:text-xl border-2 text-md border-[#aafaff] font-bold  backdrop-blur-2xl">
+                <span className="text-2xl md:text-5xl">2+</span> Year
+                <br />
+                Experience
+               </div>
             </div>
           </div>
         </div>

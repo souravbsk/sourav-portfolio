@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight, FaLink } from "react-icons/fa";
+import { FaArrowRight, FaExternalLinkAlt, FaEye, FaGithub, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ProjectDetailsModal from "../ProjectDetailsModal/ProjectDetailsModal";
 
@@ -31,7 +31,7 @@ const Project = ({ project }) => {
         to={liveLink}
       >
         <button className=" border-2 px-2 py-2 text-lg hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[rgba(170,249,255,0.5)] to-[#b5acff]">
-        <FaLink className="text-[#02132B]"></FaLink>
+        <FaExternalLinkAlt className="text-[#02132B]"></FaExternalLinkAlt>
             </button>
       </Link>
       <div className="absolute group-hover:translate-y-0  translate-y-96 duration-500  flex flex-col justify-between py-4 bg-transparent backdrop-blur-xl left-0 top-0 right-0 bottom-0 px-5">
@@ -49,13 +49,15 @@ const Project = ({ project }) => {
           </ul>
         </div>
         <div className=" flex flex-wrap items-center gap-3">
-        <Link to={clientLink}><button className=" border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-           client code
+        <Link to={clientLink}><button className=" flex items-center gap-2 border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+        <FaGithub className="text-white"></FaGithub> client code
             </button></Link>
-        <Link to={serverLink}><button className=" border-2  text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-           server code
+        <Link to={serverLink}><button className="flex items-center gap-2 border-2  text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+        <FaGithub className="text-white"></FaGithub> server code
             </button></Link>
-            <label htmlFor={`my_modal_${_id}`} className="cursor-pointer border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">Project Details</label>
+            <label htmlFor={`my_modal_${_id}`} className="cursor-pointer flex items-center gap-2 border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+              
+             <FaEye className="text-white"></FaEye> Project Details</label>
 
         </div>
       </div>
