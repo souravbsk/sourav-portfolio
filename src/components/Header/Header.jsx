@@ -6,6 +6,12 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/Full Stack Developer Resume of sourav basak.pdf";
+    downloadLink.download = "Full Stack Developer Resume of sourav basak.pdf";
+    downloadLink.click();
+  };
 
   return (
     <header className="fixed border-b border-slate-600 z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
@@ -87,13 +93,9 @@ const Header = () => {
               </AnchorLink>
             </li>
            <li className="hidden md:block">
-           <Link
-              className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3"
-              to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download"
-            >
-              <FaDownload className="text-[#b5acff]"></FaDownload>
-              Resume
-            </Link>
+           <button  onClick={handleDownload} className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
+                  <FaDownload className="animate-bounce text-[#b5acff]"></FaDownload>Resume
+               </button>
            </li>
           </ul>
         </nav>

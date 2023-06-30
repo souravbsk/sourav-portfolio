@@ -37,12 +37,12 @@ const AddAProject = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const title = form.title.value || "";
-    const liveLink = form.liveLink.value || "";
-    const clientLink = form.clientLink.value || "";
-    const serverLink = form.serverLink.value || "";
-    const picture = form.picture.files || "";
-    const description = form.description.value || "";
+    const title = form.title.value || null;
+    const liveLink = form.liveLink.value || null;
+    const clientLink = form.clientLink.value || null;
+    const serverLink = form.serverLink.value || null;
+    const picture = form.picture.files || null;
+    const description = form.description.value || null;
     const projectSS = images || [];
 
     const formData = new FormData();

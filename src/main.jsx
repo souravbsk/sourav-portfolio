@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         path:"/dashboard/all-projects",
         element:<AllProjects></AllProjects>
       },{
-        path:"/dashboard/update-project/:id",
+        path:"/update-project/:id",
         element: <UpdateProject></UpdateProject>,
         loader:({params}) => fetch(`https://sourav-portfolio-server.vercel.app/projects/${params.id}`)
       },{

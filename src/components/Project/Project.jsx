@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import ProjectDetailsModal from "../ProjectDetailsModal/ProjectDetailsModal";
 
 const Project = ({ project }) => {
-  console.log(project);
   const { title,  PhotoUrl,_id, description, skills,  clientLink, serverLink, liveLink } = project;
   return (
     // to={`/projectDetail/${_id}`}
@@ -52,9 +51,11 @@ const Project = ({ project }) => {
         <Link to={clientLink}><button className=" flex items-center gap-2 border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
         <FaGithub className="text-white"></FaGithub> client code
             </button></Link>
-        <Link to={serverLink}><button className="flex items-center gap-2 border-2  text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
-        <FaGithub className="text-white"></FaGithub> server code
-            </button></Link>
+        {
+          serverLink && <Link to={serverLink}><button className="flex items-center gap-2 border-2  text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
+          <FaGithub className="text-white"></FaGithub> server code
+              </button></Link>
+        }
             <label htmlFor={`my_modal_${_id}`} className="cursor-pointer flex items-center gap-2 border-2 text-sm px-2 py-2 hover:border-[#aafaff] border-[#aafaff]  rounded-md  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]">
               
              <FaEye className="text-white"></FaEye> Project Details</label>
