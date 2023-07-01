@@ -39,15 +39,7 @@ const WorkOverView = () => {
              Years of Experience
             </h4>
           </div>
-          {/* <div className="flex flex-col gap-2 items-center justify-center">
-            <div className="bg-yellow-500 rounded-full items-center justify-center inline-flex w-24 h-24">
-              <h1 className="text-4xl text-white font-semibold">1M</h1>
-            </div>
-            <h4 className="text-2xl text-center font-semibold bg-gradient-to-r from-cyan-300 
-            text-transparent  bg-clip-text  to-purple-400 ">
-             Years of Experience
-            </h4>
-          </div> */}
+          
         </div>
       </div>
     </div>
