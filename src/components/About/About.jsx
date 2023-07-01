@@ -9,14 +9,12 @@ const About = () => {
     <div id="about" className="container pt-16  md:pt-32">
       <SectionTitle title="About Me"></SectionTitle>
       <div className="flex gap-8 flex-col md:flex-row justify-between items-center">
-        <div data-aos="fade-right">
-          <Tilt>
+        <div data-aos="fade-right" className="md:w-6/12">
             <Lottie
-              className="flex-shrink md:w-10/12"
+              className="flex-shrink md:w-10/12  "
               animationData={codingImg}
               loop={true}
             />
-          </Tilt>
         </div>
         <div data-aos="fade-left" className="flex-1 text-white">
           <p className="text-base font-light">
@@ -36,10 +34,10 @@ const About = () => {
             you with a comprehensive solution tailored to your specific goals
             and objectives.
           </p>
-          <div className="flex items-center flex-wrap gap-8 mt-8">
+          <div className="flex items-center gap-4 md:gap-8 mt-8">
             <div
               data-aos="fade-right"
-              className=" rounded-2xl text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]  px-3 md:px-8 py-4  md:left-20 md:text-xl border-2 text-md border-[#aafaff] font-bold  backdrop-blur-2xl"
+              className=" rounded-2xl  text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]  px-3 md:px-8 py-4  md:left-20 md:text-xl border-2 text-md border-[#aafaff] font-bold  backdrop-blur-2xl"
             >
               <span className="text-2xl md:text-3xl">10+</span> Project
               <br />
