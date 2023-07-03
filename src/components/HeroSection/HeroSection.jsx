@@ -2,6 +2,7 @@ import React from "react";
 import heroImg from "../../assets/Image/heroImg.png";
 import Typewriter from "typewriter-effect";
 import { FaDownload, FaEye, FaFacebook, FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import { Tilt } from "react-tilt";
 import CircleAnimation from "../CircleAnimation/CircleAnimation";
 import { Link } from "react-router-dom";
@@ -69,6 +70,7 @@ const HeroSection = () => {
                   <li className="hover:-mt-5 duration-300"><Link to="https://www.linkedin.com/in/souravbsk/" target="_blank" className="text-3xl text-[#d3ceff]"><FaLinkedin></FaLinkedin></Link></li>
                   <li className="hover:-mt-5 duration-300"><Link to="https://www.facebook.com/sourav.Alien" target="_blank" className="text-3xl text-[#d3ceff]"><FaFacebook></FaFacebook></Link></li>
                   <li className="hover:-mt-5 duration-300"><Link to="https://stackoverflow.com/users/21434261/sourav-basak" target="_blank" className="text-3xl text-[#d3ceff]"><FaStackOverflow></FaStackOverflow></Link></li>
+                  <li className="hover:-mt-5 duration-300"><Link to="https://stackoverflow.com/users/21434261/sourav-basak" target="_blank" className="text-3xl text-[#d3ceff]"><FiMail></FiMail></Link></li>
                 </ul>
               </div>
               

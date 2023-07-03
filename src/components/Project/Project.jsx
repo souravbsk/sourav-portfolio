@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight, FaExternalLinkAlt, FaEye, FaGithub, FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ProjectDetailsModal from "../ProjectDetailsModal/ProjectDetailsModal";
-
+import LazyLoad from 'react-lazy-load';
 const Project = ({ project }) => {
   const { title,  PhotoUrl,_id, description, skills,  clientLink, serverLink, liveLink } = project;
   return (
@@ -18,12 +18,14 @@ const Project = ({ project }) => {
         {title}
       </h2>
       <figure className="shrink-0 border rounded-xl border-[#aafaff]  rotate-0">
+      <LazyLoad>
         <img
-          className="max-w-full object-top  group-hover:opacity-40 object-cover w-60  h-52 md:h-60 duration-300 rounded-xl  group-hover:shadow-lg group-hover:shadow-[#b5acff]
+          className="max-w-full object-top  group-hover:opacity-40 object-cover w-60  h-52 md:h-52 duration-300 rounded-xl  group-hover:shadow-lg group-hover:shadow-[#b5acff]
         "
           src={PhotoUrl}
           alt=""
         />
+        </LazyLoad>
       </figure>
       <Link
         className="text-3xl z-50 hidden duration-300 group-hover:block absolute top-2/4 -translate-y-1/2 right-6 text-[#02132B] bg-[#aafaff] rounded-md"

@@ -16,12 +16,12 @@ const Header = () => {
   return (
     <header className="fixed border-b border-slate-600 z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
       <div className="container mx-auto flex items-center justify-between py-6">
-        <h1
-          className="text-lg md:text-3xl font-semibold  bg-gradient-to-r from-cyan-300 
-            text-transparent  bg-clip-text  to-purple-400"
+       <Link href="/"> <h1
+          className="text-lg md:text-3xl font-bold  bg-gradient-to-r from-cyan-300 
+            text-transparent   bg-clip-text  to-purple-400"
         >
-          Sourav Basak
-        </h1>
+        <span>&lt;</span> Sourav Basak <span>/&gt;</span>
+        </h1></Link>
         <nav className="space-x-4">
           <div className="block md:hidden">
             
