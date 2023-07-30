@@ -20,13 +20,13 @@ body {
 }
 
 .box{
-    background: url("./assets/Image/heroImg.png");
+    background: url("./assets/Image/heroImgprof.png");
     background-size: contain;
-
+    background-position: bottom;
     height: 400px;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 5px 5px 5px rgba(26, 39, 80, 0.644) ;
+    box-shadow: 0 5px 5px 5px #57c7f07c ;
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import heroImg from "../../assets/Image/heroImg.png";
 import Typewriter from "typewriter-effect";
 import { FaDownload, FaEye, FaFacebook, FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
