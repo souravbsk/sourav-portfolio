@@ -20,13 +20,13 @@ body {
 }
 
 .box{
-    background: url("./assets/Image/heroImgprof.png");
+    background: url("./assets/Image/heroImgProf2.png");
     background-size: contain;
     background-position: bottom;
-    height: 400px;
+    height: 390px;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 5px 5px 5px #57c7f07c ;
+    box-shadow: 0 5px 5px 5px rgba(26, 39, 80, 0.644) ;
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
 }
@@ -65,9 +65,7 @@ transform: scale(1.5) !important;
 
 @media only screen and (max-width: 525px){
 	.box{
-        background: url("./assets/Image/heroImg.png");
-        background-size: contain;
-        height: 250px;
+        height: 230px;
         max-width: 250px;
     }
 }
