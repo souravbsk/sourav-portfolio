@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaDownload } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import { Link as AnchorLink } from "react-scroll";
 const Header = () => {
   const [navBarShow, setNavbarShow] = useState(false);
   const handleDownload = () => {
@@ -16,15 +15,17 @@ const Header = () => {
   return (
     <header className="fixed border-b border-slate-600 z-50 right-0 left-0 backdrop-blur-lg top-0 text-white shadow-lg rounded-b-3xl">
       <div className="container mx-auto flex items-center justify-between py-6">
-       <Link href="/"> <h1
-          className="text-lg md:text-3xl font-bold  bg-gradient-to-r from-cyan-300 
+        <Link href="/">
+          {" "}
+          <h1
+            className="text-lg md:text-3xl font-bold  bg-gradient-to-r from-cyan-300 
             text-transparent   bg-clip-text  to-purple-400"
-        >
-        <span>&lt;</span> Sourav Basak <span>/&gt;</span>
-        </h1></Link>
+          >
+            <span>&lt;</span> Sourav Basak <span>/&gt;</span>
+          </h1>
+        </Link>
         <nav className="space-x-4">
           <div className="block md:hidden">
-            
             <button
               className="text-xl bg-purple-400 px-2 rounded-md py-2"
               onClick={() => setNavbarShow(!navBarShow)}
@@ -38,65 +39,94 @@ const Header = () => {
               navBarShow ? "left-0" : "-left-96"
             } `}
           >
-            <li>
-              <AnchorLink
-                href="#home"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+            <li   className="cursor-pointer" >
+           <AnchorLink
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="hero"
+                className=" font-bold cursor-pointer text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 Home
               </AnchorLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <AnchorLink
-                href="#about"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="about"
+                className=" font-bold cursor-pointer text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 About
               </AnchorLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <AnchorLink
-                href="#skills"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="skills"
+                className=" font-bold cursor-pointer text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 Skills
               </AnchorLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <AnchorLink
-                href="#projects"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="projects"
+                 className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 Projects
               </AnchorLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <AnchorLink
-                href="#experience"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="experience"
+                 className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 Experience
               </AnchorLink>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <AnchorLink
-                href="#contact"
-                className="font-bold text-xl bg-gradient-to-r from-cyan-300 
+                offset={0}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                to="contact"
+                 className="font-bold text-xl bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400"
               >
                 Contact
               </AnchorLink>
             </li>
-           <li className="hidden md:block">
-           <button  onClick={handleDownload} className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
-                  <FaDownload className="animate-bounce text-[#b5acff]"></FaDownload>Resume
-               </button>
-           </li>
+            <li className="hidden md:block">
+              <button
+                onClick={handleDownload}
+                className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3"
+                to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download"
+              >
+                <FaDownload className="animate-bounce text-[#b5acff]"></FaDownload>
+                Resume
+              </button>
+            </li>
           </ul>
         </nav>
       </div>

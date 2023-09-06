@@ -28,11 +28,34 @@ const Experience = () => {
           
           }
         >
-          <h3 className="text-3xl font-semibold bg-gradient-to-l from-cyan-300 
+          <h3 className="text-2xl font-semibold bg-gradient-to-l from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400">Junior Web Developer</h3>
           <h4 className="vertical-timeline-element-subtitle">Brand & Visual</h4>
           <p>
            Wordpress Developer, Woocomerece, CPanel Management, User Experience, Bug Fixing
+          </p>
+        </VerticalTimelineElement>
+
+{/* _________________________________ */}
+
+        
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: "#020F22", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #B492FC" }}
+          date="Jun 2023 - Aug 2023"
+          iconStyle={{ background: "#020F22", color: "#fff" }}
+          icon={
+           
+            <FaReact className="text-5xl animate-spin"></FaReact>
+          
+          }
+        >
+          <h3 className="text-2xl font-semibold bg-gradient-to-l from-cyan-300 
+            text-transparent  bg-clip-text  to-purple-400">MERN Stack Developer (intern)</h3>
+          <h4 className="vertical-timeline-element-subtitle">Stackkaroo.com</h4>
+          <p>
+           React, next js, redux-toolkit, api instigation , Bug Fixing, convert figma to react, decision making 
           </p>
         </VerticalTimelineElement>
 

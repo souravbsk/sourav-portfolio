@@ -20,7 +20,7 @@ const HeroSection = () => {
 
 
   return (
-    <section className="container" id="home">
+    <section className="container" id="hero">
       <div>
         <div className="pt-5 md:pt-20">
           <div className="flex gap-14 flex-col md:flex-row justify-between md:items-center w-full">
@@ -40,7 +40,7 @@ const HeroSection = () => {
                   options={{
                     strings: [
                       "React Developer",
-                      "Front End Designer ",
+                      "Front End Developer ",
                       "Web Developer",
                       "MERN Stack Developer",
                     ],
@@ -53,10 +53,10 @@ const HeroSection = () => {
 
               <div className="flex  pt-5 md:pt-10 gap-3 flex-col md:flex-row">
             
-                <button  onClick={handleDownload} className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd&export=download" >
+                <button  onClick={handleDownload} className=" rounded-3xl border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]   flex items-center gap-3" to="https://drive.google.com/u/0/uc?id=19FNYWhxd5of0-tGV4vc5TPOyR6yPXI5v&export=download" >
                   <FaDownload className="animate-bounce text-[#b5acff]"></FaDownload>DownLoad Resume
                </button>
-                <Link to='https://drive.google.com/file/d/1JsGK4WrN9lDECmJPrvJTtTUdryI3Jltd/view?usp=sharing' target="_blank">
+                <Link to='https://drive.google.com/file/d/19FNYWhxd5of0-tGV4vc5TPOyR6yPXI5v/view' target="_blank">
                 <button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn rounded-3xl  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] flex items-center gap-3">
                   <FaEye className="text-[#b5acff]"></FaEye>View Resume
                 </button>

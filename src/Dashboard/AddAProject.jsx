@@ -44,6 +44,9 @@ const AddAProject = () => {
     const picture = form.picture.files || null;
     const description = form.description.value || null;
     const projectSS = images || [];
+    const status = form.status.value;
+    const category = form.category.value; 
+
 
     const formData = new FormData();
     formData.append("image", picture[0]);
@@ -65,10 +68,15 @@ const AddAProject = () => {
             PhotoUrl: projectImage || "",
             description,
             projectSS,
+            status,
+            category
           };
 
           axios
-            .post("https://sourav-portfolio-server.vercel.app/projects", newProject)
+            .post(
+              "https://sourav-portfolio-server.vercel.app/projects",
+              newProject
+            )
             .then((res) => {
               if (res.data.insertedId) {
                 form.reset();
@@ -167,6 +175,30 @@ const AddAProject = () => {
               />
             </div>
           </div>
+          <div className="flex items-center justify-between gap-5">
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">Category</span>
+              </label>
+
+              <select name="category" defaultValue="react" className="select select-ghost bg-[#2A303C] w-full">
+                <option value="html">html/css/js</option>
+                <option value="react">react</option>
+                <option value="mern">mern</option>
+                <option value="next">next</option>
+                <option value="wordpress">wordpress</option>
+              </select>
+            </div>
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">Status</span>
+              </label>
+              <select name="status" defaultValue="normal" className="select select-ghost bg-[#2A303C] w-full">
+                <option value="special">special</option>
+                <option value="normal">normal</option>
+              </select>
+            </div>
+          </div>
           <div className="form-control w-full">
             <label className="label">
               <span className="label-text">Description</span>
@@ -204,7 +236,7 @@ const AddAProject = () => {
               </div>
             ))}
           </div>
-         
+
           <div className="form-control mt-6">
             <button className="btn btn-primary">Add Projects</button>
           </div>
