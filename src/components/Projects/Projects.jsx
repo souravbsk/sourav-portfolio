@@ -35,25 +35,25 @@ const Projects = () => {
         <TabList className="grid max-w-full md:w-8/12 mx-auto grid-cols-2 md:grid-cols-4 gap-5 items-center mt-8 md:mt-12 justify-center">
           <Tab
             onClick={() => setTabValue("")}
-            className=" border-2 text-base md:px-4 px-0 hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
+            className=" border-2 text-base md:px-4 px-0 bg-[#020F22] hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
           >
             All
           </Tab>
           <Tab
             onClick={() => setTabValue("frontend")}
-            className=" border-2 text-base md:px-4 px-0 hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
+            className=" border-2 text-base md:px-4 px-0 bg-[#020F22] hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
           >
             Front-End
           </Tab>
           <Tab
             onClick={() => setTabValue("fullstack")}
-            className=" border-2 text-base md:px-4 px-0 hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
+            className=" border-2 text-base md:px-4 px-0 bg-[#020F22] hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
           >
             Full Stack
           </Tab>
           <Tab
             onClick={() => setTabValue("wordpress")}
-            className=" border-2 text-base md:px-4 px-0 hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
+            className=" border-2 text-base md:px-4 px-0 bg-[#020F22] hover:border-[#aafaff] border-[#aafaff] btn  primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff]"
           >
             Wordpress
           </Tab>

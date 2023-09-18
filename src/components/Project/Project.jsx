@@ -9,7 +9,7 @@ const Project = ({ project }) => {
     // to={`/projectDetail/${_id}`}
     <>
     <label htmlFor={`my_modal_${_id}`}>
-    <div data-aos="flip-up" className="flex h-80 md:h-72  cursor-pointer hover:shadow-lg hover:shadow-[#b5acff] overflow-hidden flex-col-reverse relative duration-300 md:flex-row group rounded-lg border border-[#aafaff] p-4 md:p-10 gap-8 items-center justify-between">
+    <div data-aos="flip-up" className="flex h-80 md:h-72 bg-[#020F22]  cursor-pointer hover:shadow-lg hover:shadow-[#b5acff] overflow-hidden flex-col-reverse relative duration-300 md:flex-row group rounded-lg border border-[#aafaff] p-4 md:p-10 gap-8 items-center justify-between">
       <h2
         className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-cyan-300 
             text-transparent  bg-clip-text  to-purple-400 
