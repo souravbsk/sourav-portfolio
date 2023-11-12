@@ -1,78 +1,82 @@
 [
-    {
-      "id": 1,
-      "title": "HTML",
-      "icon": "https://i.ibb.co/djDbpV7/2.png"
-    },
-    {
-      "id": 2,
-      "title": "CSS",
-      "icon": "https://i.ibb.co/mbdKsF4/3.png"
-    },
-    {
-      "id": 3,
-      "title": "Bootstrap",
-      "icon": "https://i.ibb.co/cbvCvtF/10.png"
-    },
-    {
-      "id": 4,
-      "title": "Tailwind",
-      "icon": "https://i.ibb.co/wJWmTS5/1.png"
-    },
-    {
-      "id": 5,
-      "title": "Sass",
-      "icon": "https://i.ibb.co/KWttSqx/7.png"
-    },
-    {
-      "id": 6,
-      "title": "JavaScript",
-      "icon": "https://i.ibb.co/gdd3ZL4/5.png"
-    },
-    {
-      "id": 7,
-      "title": "React",
-      "icon": "https://i.ibb.co/ckFC86s/pngwing-com-3.png"
-    },
-    {
-      "id": 8,
-      "title": "React Router",
-      "icon": "https://i.ibb.co/N1CPHd5/11.png"
-    },
-    {
-      "id": 9,
-      "title": "Next Js",
-      "icon": "https://i.ibb.co/WptcDmJ/13.png"
-    },
-    {
-      "id": 10,
-      "title": "Firebase",
-      "icon": "https://i.ibb.co/tPQff2F/9.png"
-    },
-    {
-      "id": 11,
-      "title": "Git",
-      "icon": "https://i.ibb.co/41Zr0xx/6.png"
-    },
-    {
-      "id": 12,
-      "title": "Express Js",
-      "icon": "https://i.ibb.co/5hcJr34/14.png"
-    },
-    {
-      "id": 13,
-      "title": "Node Js",
-      "icon": "https://i.ibb.co/CnBB843/15.png"
-    },
-    {
-      "id": 14,
-      "title": "MongoDB",
-      "icon": "https://i.ibb.co/6YSjx8C/12.png"
-    },
-    {
-      "id": 15,
-      "title": "WordPress",
-      "icon": "https://i.ibb.co/KN7b43Z/8.png"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "HTML",
+    "icon": "https://i.ibb.co/f0p4y5S/html.png"
+  },
+  {
+    "id": 2,
+    "title": "CSS",
+    "icon": "https://i.ibb.co/FDYXqC2/css.png"
+  },
+  {
+    "id": 3,
+    "title": "Bootstrap",
+    "icon": "https://i.ibb.co/MMv5qn8/bootstrap.png"
+  },
+  {
+    "id": 4,
+    "title": "Tailwind",
+    "icon": "https://i.ibb.co/jvpyv6N/tailwind.png"
+  },
+  {
+    "id": 5,
+    "title": "Sass",
+    "icon": "https://i.ibb.co/8bCgvpP/sass.png"
+  },
+  {
+    "id": 6,
+    "title": "JavaScript",
+    "icon": "https://i.ibb.co/vXjHS3c/javascript.png"
+  },
+  {
+    "id": 7,
+    "title": "React",
+    "icon": "https://i.ibb.co/r0SqLbZ/react.png"
+  },
+  {
+    "id": 8,
+    "title": "React Router",
+    "icon": "https://i.ibb.co/99qr5B0/react-router.png"
+  },
+  {
+    "id": 9,
+    "title": "Redux Toolkit",
+    "icon": "https://i.ibb.co/j8fqKNX/redux-tookit.png"
+  },
+  {
+    "id": 10,
+    "title": "Next Js",
+    "icon": "https://i.ibb.co/CwVFdxc/next-js.png"
+  },
+  {
+    "id": 11,
+    "title": "Firebase",
+    "icon": "https://i.ibb.co/vPtnqmZ/firebase.png"
+  },
+  {
+    "id": 12,
+    "title": "Git",
+    "icon": "https://i.ibb.co/s97p6V2/git.png"
+  },
+  {
+    "id": 13,
+    "title": "Express Js",
+    "icon": "https://i.ibb.co/y4nXyFB/express-js.png"
+  },
+  {
+    "id": 14,
+    "title": "Node Js",
+    "icon": "https://i.ibb.co/ZfqVw91/node-js.png"
+  },
+  {
+    "id": 15,
+    "title": "MongoDB",
+    "icon": "https://i.ibb.co/JcZJ2Hq/mongodb.png"
+  },
+  {
+    "id": 16,
+    "title": "WordPress",
+    "icon": "https://i.ibb.co/JKgc9qJ/wordpress.png"
+  }
+]
