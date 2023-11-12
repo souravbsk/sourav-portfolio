@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+AOS.init();
 
 const WorkOverView = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+ 
   return (
     <div className=" mt-16 md:mt-32">
       <div
