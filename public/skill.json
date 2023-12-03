@@ -2,81 +2,81 @@
   {
     "id": 1,
     "title": "HTML",
-    "icon": "https://i.ibb.co/f0p4y5S/html.png"
+    "icon": "/src/assets/skilimage/html.png"
   },
   {
     "id": 2,
     "title": "CSS",
-    "icon": "https://i.ibb.co/FDYXqC2/css.png"
+    "icon": "/src/assets/skilimage/css.png"
   },
   {
     "id": 3,
     "title": "Bootstrap",
-    "icon": "https://i.ibb.co/MMv5qn8/bootstrap.png"
+    "icon": "/src/assets/skilimage/bootstrap.png"
   },
   {
     "id": 4,
     "title": "Tailwind",
-    "icon": "https://i.ibb.co/jvpyv6N/tailwind.png"
+    "icon": "/src/assets/skilimage/tailwind.png"
   },
   {
     "id": 5,
     "title": "Sass",
-    "icon": "https://i.ibb.co/8bCgvpP/sass.png"
+    "icon": "/src/assets/skilimage/sass.png"
   },
   {
     "id": 6,
     "title": "JavaScript",
-    "icon": "https://i.ibb.co/vXjHS3c/javascript.png"
+    "icon": "/src/assets/skilimage/javascript.png"
   },
   {
     "id": 7,
     "title": "React",
-    "icon": "https://i.ibb.co/r0SqLbZ/react.png"
+    "icon": "/src/assets/skilimage/react.png"
   },
   {
     "id": 8,
     "title": "React Router",
-    "icon": "https://i.ibb.co/99qr5B0/react-router.png"
+    "icon": "/src/assets/skilimage/react-router.png"
   },
   {
     "id": 9,
     "title": "Redux Toolkit",
-    "icon": "https://i.ibb.co/j8fqKNX/redux-tookit.png"
+    "icon": "/src/assets/skilimage/redux-tookit.png"
   },
   {
     "id": 10,
     "title": "Next Js",
-    "icon": "https://i.ibb.co/CwVFdxc/next-js.png"
+    "icon": "/src/assets/skilimage/next-js.png"
   },
   {
     "id": 11,
     "title": "Firebase",
-    "icon": "https://i.ibb.co/vPtnqmZ/firebase.png"
+    "icon": "/src/assets/skilimage/firebase.png"
   },
   {
     "id": 12,
     "title": "Git",
-    "icon": "https://i.ibb.co/s97p6V2/git.png"
+    "icon": "/src/assets/skilimage/git.png"
   },
   {
     "id": 13,
     "title": "Express Js",
-    "icon": "https://i.ibb.co/y4nXyFB/express-js.png"
+    "icon": "/src/assets/skilimage/express-js.png"
   },
   {
     "id": 14,
     "title": "Node Js",
-    "icon": "https://i.ibb.co/ZfqVw91/node-js.png"
+    "icon": "/src/assets/skilimage/node-js.png"
   },
   {
     "id": 15,
     "title": "MongoDB",
-    "icon": "https://i.ibb.co/JcZJ2Hq/mongodb.png"
+    "icon": "/src/assets/skilimage/mongodb.png"
   },
   {
     "id": 16,
     "title": "WordPress",
-    "icon": "https://i.ibb.co/JKgc9qJ/wordpress.png"
+    "icon": "/src/assets/skilimage/wordpress.png"
   }
 ]
