@@ -34,7 +34,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="https://www.facebook.com/sourav.Alien"
+                to="https://www.facebook.com/souravbsk"
                 target="_blank"
                 className="text-xl text-[#d3ceff]"
               >

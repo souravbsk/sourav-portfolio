@@ -93,7 +93,7 @@ const HeroSection = () => {
                   </li>
                   <li className="hover:-mt-5 duration-300">
                     <Link
-                      to="https://www.facebook.com/sourav.Alien"
+                      to="https://www.facebook.com/souravbsk"
                       target="_blank"
                       className="text-3xl text-[#d3ceff]"
                     >
@@ -111,7 +111,7 @@ const HeroSection = () => {
                   </li>
                   <li className="hover:-mt-5 duration-300">
                     <Link
-                      to="https://stackoverflow.com/users/21434261/sourav-basak"
+                      to="mailto:souravbsk01@gmail.com"
                       target="_blank"
                       className="text-3xl text-[#d3ceff]"
                     >
