@@ -2,81 +2,81 @@
   {
     "id": 1,
     "title": "HTML",
-    "icon": "/src/assets/skilimage/html.png"
+    "icon": "./skilimage/html.png"
   },
   {
     "id": 2,
     "title": "CSS",
-    "icon": "/src/assets/skilimage/css.png"
+    "icon": "./skilimage/css.png"
   },
   {
     "id": 3,
     "title": "Bootstrap",
-    "icon": "/src/assets/skilimage/bootstrap.png"
+    "icon": "./skilimage/bootstrap.png"
   },
   {
     "id": 4,
     "title": "Tailwind",
-    "icon": "/src/assets/skilimage/tailwind.png"
+    "icon": "./skilimage/tailwind.png"
   },
   {
     "id": 5,
     "title": "Sass",
-    "icon": "/src/assets/skilimage/sass.png"
+    "icon": "./skilimage/sass.png"
   },
   {
     "id": 6,
     "title": "JavaScript",
-    "icon": "/src/assets/skilimage/javascript.png"
+    "icon": "./skilimage/javascript.png"
   },
   {
     "id": 7,
     "title": "React",
-    "icon": "/src/assets/skilimage/react.png"
+    "icon": "./skilimage/react.png"
   },
   {
     "id": 8,
     "title": "React Router",
-    "icon": "/src/assets/skilimage/react-router.png"
+    "icon": "./skilimage/react-router.png"
   },
   {
     "id": 9,
     "title": "Redux Toolkit",
-    "icon": "/src/assets/skilimage/redux-tookit.png"
+    "icon": "./skilimage/redux-tookit.png"
   },
   {
     "id": 10,
     "title": "Next Js",
-    "icon": "/src/assets/skilimage/next-js.png"
+    "icon": "./skilimage/next-js.png"
   },
   {
     "id": 11,
     "title": "Firebase",
-    "icon": "/src/assets/skilimage/firebase.png"
+    "icon": "./skilimage/firebase.png"
   },
   {
     "id": 12,
     "title": "Git",
-    "icon": "/src/assets/skilimage/git.png"
+    "icon": "./skilimage/git.png"
   },
   {
     "id": 13,
     "title": "Express Js",
-    "icon": "/src/assets/skilimage/express-js.png"
+    "icon": "./skilimage/express-js.png"
   },
   {
     "id": 14,
     "title": "Node Js",
-    "icon": "/src/assets/skilimage/node-js.png"
+    "icon": "./skilimage/node-js.png"
   },
   {
     "id": 15,
     "title": "MongoDB",
-    "icon": "/src/assets/skilimage/mongodb.png"
+    "icon": "./skilimage/mongodb.png"
   },
   {
     "id": 16,
     "title": "WordPress",
-    "icon": "/src/assets/skilimage/wordpress.png"
+    "icon": "./skilimage/wordpress.png"
   }
 ]
