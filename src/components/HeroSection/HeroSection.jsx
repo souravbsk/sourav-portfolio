@@ -63,7 +63,7 @@ const HeroSection = () => {
                   DownLoad Resume
                 </button>
                 <Link
-                  to="https://drive.google.com/file/d/19FNYWhxd5of0-tGV4vc5TPOyR6yPXI5v/view"
+                  to="https://drive.google.com/file/d/1nXv2J3-moRgfTEoElNH923fUG3AqdKFc/view"
                   target="_blank"
                 >
                   <button className=" border-2 text-md hover:border-[#aafaff] border-[#aafaff] btn rounded-3xl w-full primary-btn font-bold text-transparent  bg-clip-text bg-gradient-to-r from-[#aafaff] to-[#b5acff] flex items-center gap-3">
