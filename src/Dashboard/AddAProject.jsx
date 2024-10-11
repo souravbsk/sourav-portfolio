@@ -8,7 +8,7 @@ const ImageHostKey = import.meta.env.VITE_IMAGE_KEY;
 const AddAProject = () => {
   const [selected, setSelected] = useState([]);
   const [images, setImages] = useState([]);
-  const url = `https://api.imgbb.com/1/upload?key=${ImageHostKey}`;
+  const url = `https://api.imgbb.com/1/upload?key=a7bbb2deb934c4cc51b1058207d12d2e`;
   const handleImageUpload = (e) => {
     const imageSS = e.target.files;
     const formData = new FormData();
