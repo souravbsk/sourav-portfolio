@@ -11,7 +11,7 @@ const UpdateProject = () => {
     console.log(projectData);
     const [selected, setSelected] = useState([...projectData.skills]);
     const [images, setImages] = useState([...projectData.projectSS]);
-    const url = `https://api.imgbb.com/1/upload?key=${ImageHostKey}`;
+    const url = `https://api.imgbb.com/1/upload?key=a7bbb2deb934c4cc51b1058207d12d2e`;
     const handleImageUpload = (e) => {
       const imageSS = e.target.files;
       const formData = new FormData();
