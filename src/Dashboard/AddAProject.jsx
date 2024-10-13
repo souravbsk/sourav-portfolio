@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { TagsInput } from "react-tag-input-component";
 import Swal from "sweetalert2";
-const ImageHostKey = import.meta.env.VITE_IMAGE_KEY;
+const ImageHostKey = "a7bbb2deb934c4cc51b1058207d12d2e";
 
 const AddAProject = () => {
   const [selected, setSelected] = useState([]);
