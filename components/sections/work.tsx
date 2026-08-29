@@ -8,7 +8,7 @@ import type { ProjectData } from "@/types/content";
 
 export function Work({ projects }: { projects: ProjectData[] }) {
   return (
-    <section id="work" className="scroll-mt-24 py-24 md:py-32">
+    <section id="work" className="scroll-mt-24 py-16 md:py-20">
       <div className="container-page">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading

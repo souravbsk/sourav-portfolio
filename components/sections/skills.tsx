@@ -24,7 +24,7 @@ export function Skills({ skills }: { skills: SkillData[] }) {
   if (grouped.length === 0) return null;
 
   return (
-    <section id="skills" className="scroll-mt-24 py-24 md:py-32">
+    <section id="skills" className="scroll-mt-24 py-16 md:py-20">
       <div className="container-page">
         <SectionHeading
           eyebrow="02 — Toolkit"
@@ -32,7 +32,7 @@ export function Skills({ skills }: { skills: SkillData[] }) {
           description="Grouped by where each one sits in a project rather than listed as one long wall of logos."
         />
 
-        <div className="mt-12 space-y-10">
+        <div className="mt-8 space-y-8">
           {grouped.map((entry) => (
             <div key={entry.group}>
               <div className="mb-4 flex items-center gap-3">

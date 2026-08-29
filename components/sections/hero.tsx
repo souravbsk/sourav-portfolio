@@ -11,7 +11,7 @@ import type { ProfileData } from "@/types/content";
 
 export function Hero({ profile }: { profile: ProfileData }) {
   return (
-    <section id="hero" className="relative overflow-hidden pt-28 md:pt-32">
+    <section id="hero" className="relative overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12">
       {/* Two quiet background layers only: a blueprint grid fading out, and a
           single violet bloom behind the 3D object. */}
       <div
@@ -104,7 +104,7 @@ export function Hero({ profile }: { profile: ProfileData }) {
         {profile.stats.length > 0 && (
           <RevealGroup
             delay={0.15}
-            className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3"
+            className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3"
           >
             {profile.stats.map((stat) => (
               <RevealItem

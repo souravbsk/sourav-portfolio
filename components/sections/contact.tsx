@@ -36,7 +36,7 @@ export function Contact({ profile }: { profile: ProfileData }) {
   }[];
 
   return (
-    <section id="contact" className="scroll-mt-24 py-24 md:py-32">
+    <section id="contact" className="scroll-mt-24 py-16 md:py-20">
       <div className="container-page">
         <SectionHeading
           eyebrow="05 — Contact"
@@ -44,7 +44,7 @@ export function Contact({ profile }: { profile: ProfileData }) {
           description="Tell me what you are building. I read every message and reply to the ones I can genuinely help with."
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal direction="right" className="space-y-3">
             {details.map((detail) => {
               const content = (

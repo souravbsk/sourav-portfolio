@@ -21,11 +21,11 @@ export function About({ profile }: { profile: ProfileData }) {
   }[];
 
   return (
-    <section id="about" className="scroll-mt-24 py-24 md:py-32">
+    <section id="about" className="scroll-mt-24 py-16 md:py-20">
       <div className="container-page">
         <SectionHeading eyebrow="01 — About" title="A little context" />
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+        <div className="mt-8 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           <Reveal direction="right">
             <div className="panel panel-glow relative overflow-hidden p-2">
               <div className="relative aspect-4/5 overflow-hidden rounded-xl bg-panel-strong">

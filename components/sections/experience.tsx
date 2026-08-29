@@ -27,11 +27,11 @@ export function Experience({ items }: { items: ExperienceData[] }) {
   if (items.length === 0) return null;
 
   return (
-    <section id="experience" className="scroll-mt-24 py-24 md:py-32">
+    <section id="experience" className="scroll-mt-24 py-16 md:py-20">
       <div className="container-page">
         <SectionHeading eyebrow="04 — Experience" title="Where I have worked" />
 
-        <RevealGroup as="ul" stagger={0.1} className="relative mt-12">
+        <RevealGroup as="ul" stagger={0.1} className="relative mt-8">
           {/* Single hairline rail behind the markers rather than a per-item
               border, so the timeline reads as one continuous line. */}
           <span
@@ -44,7 +44,7 @@ export function Experience({ items }: { items: ExperienceData[] }) {
             const href = externalHref(item.companyUrl);
 
             return (
-              <RevealItem key={item._id} as="li" className="relative pb-10 pl-16">
+              <RevealItem key={item._id} as="li" className="relative pb-8 pl-16 last:pb-0">
                 <span className="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-border bg-background text-muted-foreground">
                   <Icon className="size-4.5" />
                 </span>
