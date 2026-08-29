@@ -50,3 +50,12 @@ export function externalHref(url?: string | null) {
   }
   return `https://${trimmed}`;
 }
+
+/** Same-page section jump. Next.js Link skips CSS `scroll-behavior: smooth`. */
+export function scrollToHash(hash: string) {
+  const id = hash.replace(/^[#/]+/, "");
+  const node = document.getElementById(id);
+  if (!node) return false;
+  node.scrollIntoView({ behavior: "smooth", block: "start" });
+  return true;
+}

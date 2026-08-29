@@ -16,7 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn, externalHref } from "@/lib/utils";
+import { cn, externalHref, scrollToHash } from "@/lib/utils";
 import type { BlogPostData, ProductData, ProjectData } from "@/types/content";
 
 const NAV_LINKS = [
@@ -104,6 +104,13 @@ export function SiteHeader({
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={(event) => {
+                    if (!link.href.startsWith("/#") || pathname !== "/") return;
+                    event.preventDefault();
+                    if (scrollToHash(link.href)) {
+                      window.history.pushState(null, "", link.href);
+                    }
+                  }}
                   className={cn(
                     "rounded-full px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.14em] transition-colors",
                     active
@@ -154,7 +161,14 @@ export function SiteHeader({
                     <Link
                       key={link.href}
                       href={link.href}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={(event) => {
+                        setMobileOpen(false);
+                        if (!link.href.startsWith("/#") || pathname !== "/") return;
+                        event.preventDefault();
+                        if (scrollToHash(link.href)) {
+                          window.history.pushState(null, "", link.href);
+                        }
+                      }}
                       className="rounded-lg px-3 py-3 font-display text-lg transition-colors hover:bg-panel-strong"
                     >
                       {link.label}

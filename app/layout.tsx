@@ -69,6 +69,7 @@ export default function RootLayout({
       lang="en"
       // next-themes writes the class before paint; React would otherwise warn.
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetBrainsMono.variable}`}
     >
       <body className="min-h-dvh bg-background antialiased">

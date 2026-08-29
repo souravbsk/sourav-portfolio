@@ -6,7 +6,7 @@ import { Typewriter } from "@/components/motion/typewriter";
 import { SocialIcon } from "@/components/site/social-icon";
 import { HeroVisual } from "@/components/three/hero-visual";
 import { Button } from "@/components/ui/button";
-import { externalHref } from "@/lib/utils";
+import { externalHref, scrollToHash } from "@/lib/utils";
 import type { ProfileData } from "@/types/content";
 
 export function Hero({ profile }: { profile: ProfileData }) {
@@ -71,7 +71,15 @@ export function Hero({ profile }: { profile: ProfileData }) {
                 )}
 
                 <Button asChild variant="ghost" size="lg">
-                  <Link href="#contact">
+                  <Link
+                    href="#contact"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      if (scrollToHash("contact")) {
+                        window.history.pushState(null, "", "#contact");
+                      }
+                    }}
+                  >
                     Get in touch
                     <ArrowRightIcon />
                   </Link>
