@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { MenuIcon, SearchIcon } from "lucide-react";
 
 import { CommandPalette } from "@/components/site/command-palette";
+import { HashLink } from "@/components/site/hash-link";
 import { ProductsMenu } from "@/components/site/products-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn, externalHref, scrollToHash } from "@/lib/utils";
+import { cn, externalHref } from "@/lib/utils";
 import type { BlogPostData, ProductData, ProjectData } from "@/types/content";
 
 const NAV_LINKS = [
@@ -100,24 +101,19 @@ export function SiteHeader({
                   ? false
                   : pathname === link.href || pathname.startsWith(`${link.href}/`);
 
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(event) => {
-                    if (!link.href.startsWith("/#") || pathname !== "/") return;
-                    event.preventDefault();
-                    if (scrollToHash(link.href)) {
-                      window.history.pushState(null, "", link.href);
-                    }
-                  }}
-                  className={cn(
-                    "rounded-full px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.14em] transition-colors",
-                    active
-                      ? "text-cyan-brand"
-                      : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
+              const className = cn(
+                "rounded-full px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.14em] transition-colors",
+                active
+                  ? "text-cyan-brand"
+                  : "text-muted-foreground hover:text-foreground",
+              );
+
+              return link.href.includes("#") ? (
+                <HashLink key={link.href} href={link.href} className={className}>
+                  {link.label}
+                </HashLink>
+              ) : (
+                <Link key={link.href} href={link.href} className={className}>
                   {link.label}
                 </Link>
               );
@@ -157,23 +153,29 @@ export function SiteHeader({
                   Navigate
                 </SheetTitle>
                 <nav className="flex flex-col gap-1" aria-label="Mobile">
-                  {NAV_LINKS.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={(event) => {
-                        setMobileOpen(false);
-                        if (!link.href.startsWith("/#") || pathname !== "/") return;
-                        event.preventDefault();
-                        if (scrollToHash(link.href)) {
-                          window.history.pushState(null, "", link.href);
-                        }
-                      }}
-                      className="rounded-lg px-3 py-3 font-display text-lg transition-colors hover:bg-panel-strong"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                  {NAV_LINKS.map((link) => {
+                    const className =
+                      "rounded-lg px-3 py-3 font-display text-lg transition-colors hover:bg-panel-strong";
+                    return link.href.includes("#") ? (
+                      <HashLink
+                        key={link.href}
+                        href={link.href}
+                        className={className}
+                        onNavigate={() => setMobileOpen(false)}
+                      >
+                        {link.label}
+                      </HashLink>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={className}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                   <p className="mt-3 px-3 font-mono text-[0.625rem] uppercase tracking-[0.16em] text-muted-foreground">
                     Products
                   </p>
