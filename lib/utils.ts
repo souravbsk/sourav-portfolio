@@ -51,6 +51,14 @@ export function externalHref(url?: string | null) {
   return `https://${trimmed}`;
 }
 
+export function stripHtml(html: string) {
+  return html
+    .replace(/<\/(p|li|h[1-6]|div)>/gi, " ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /** Same-page section jump. Next.js Link skips CSS `scroll-behavior: smooth`. */
 export function scrollToHash(hash: string) {
   const id = hash.replace(/^[#/]+/, "");

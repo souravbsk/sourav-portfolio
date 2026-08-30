@@ -44,7 +44,11 @@ export function Experience({ items }: { items: ExperienceData[] }) {
             const href = externalHref(item.companyUrl);
 
             return (
-              <RevealItem key={item._id} as="li" className="relative pb-8 pl-16 last:pb-0">
+              <RevealItem
+                key={item._id}
+                as="li"
+                className="relative pb-8 pl-16 last:pb-0"
+              >
                 <span className="absolute left-0 top-0 grid size-10 place-items-center rounded-full border border-border bg-background text-muted-foreground">
                   <Icon className="size-4.5" />
                 </span>
@@ -81,9 +85,10 @@ export function Experience({ items }: { items: ExperienceData[] }) {
                   </div>
 
                   {item.description && (
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
+                    <div
+                      className="prose prose-sm prose-neutral dark:prose-invert mt-3 max-w-none text-sm leading-relaxed text-muted-foreground [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-5 [&_ol]:pl-5 [&_p]:mt-0"
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
                   )}
 
                   {item.highlights.length > 0 && (

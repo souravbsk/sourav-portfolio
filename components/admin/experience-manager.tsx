@@ -24,6 +24,7 @@ import { apiRequest, RequestError } from "@/lib/admin-client";
 import { EXPERIENCE_ICONS, type ExperienceIcon } from "@/lib/taxonomy";
 import { cn } from "@/lib/utils";
 import type { ExperienceData } from "@/types/content";
+import { RichTextEditor } from "./rich-text-editor";
 
 type Draft = Omit<ExperienceData, "_id">;
 
@@ -161,7 +162,11 @@ function ExperienceFields({
           />
         </Field>
 
-        <Field id={`${idPrefix}-company`} label="Company" error={errors.company}>
+        <Field
+          id={`${idPrefix}-company`}
+          label="Company"
+          error={errors.company}
+        >
           <Input
             id={`${idPrefix}-company`}
             value={form.company}
@@ -186,7 +191,11 @@ function ExperienceFields({
           />
         </Field>
 
-        <Field id={`${idPrefix}-url`} label="Company URL" error={errors.companyUrl}>
+        <Field
+          id={`${idPrefix}-url`}
+          label="Company URL"
+          error={errors.companyUrl}
+        >
           <Input
             id={`${idPrefix}-url`}
             value={form.companyUrl}
@@ -197,15 +206,15 @@ function ExperienceFields({
           />
         </Field>
       </FieldRow>
-
-      <Field id={`${idPrefix}-desc`} label="Description" error={errors.description}>
-        <Textarea
+      <Field
+        id={`${idPrefix}-desc`}
+        label="Description"
+        error={errors.description}
+      >
+        <RichTextEditor
           id={`${idPrefix}-desc`}
-          rows={3}
           value={form.description}
-          onChange={(event) =>
-            setForm({ ...form, description: event.target.value })
-          }
+          onChange={(html) => setForm({ ...form, description: html })}
         />
       </Field>
 
@@ -330,7 +339,12 @@ function ExperienceEditor({
       />
 
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <Button type="button" variant="gradient" onClick={() => void handleSave()} disabled={saving}>
+        <Button
+          type="button"
+          variant="gradient"
+          onClick={() => void handleSave()}
+          disabled={saving}
+        >
           {saving ? (
             <>
               <LoaderIcon className="animate-spin" />

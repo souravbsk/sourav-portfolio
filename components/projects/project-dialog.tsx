@@ -47,7 +47,10 @@ export function ProjectDialog({
 
               <div className="relative z-10 flex h-full min-h-56 flex-col justify-end gap-3 px-6 pb-6 pt-16 md:min-h-72 md:px-8">
                 {project.status === "special" && (
-                  <Badge variant="violet" className="w-fit bg-background/70 backdrop-blur">
+                  <Badge
+                    variant="violet"
+                    className="w-fit bg-background/70 backdrop-blur"
+                  >
                     <SparklesIcon />
                     Featured build
                   </Badge>
@@ -56,8 +59,11 @@ export function ProjectDialog({
                   {project.title}
                 </DialogTitle>
                 {project.description && (
-                  <DialogDescription className="max-w-2xl text-sm leading-relaxed text-foreground/80 md:text-base">
-                    {project.description}
+                  <DialogDescription asChild>
+                    <div
+                      className="prose prose-sm prose-invert max-w-2xl text-sm leading-relaxed text-foreground/80 md:text-base [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-5 [&_ol]:pl-5 [&_p]:mt-0"
+                      dangerouslySetInnerHTML={{ __html: project.description }}
+                    />
                   </DialogDescription>
                 )}
               </div>
@@ -66,7 +72,10 @@ export function ProjectDialog({
             <div className="grid gap-8 px-6 py-6 md:grid-cols-[minmax(0,1fr)_240px] md:px-8 md:py-8">
               <div className="min-w-0 space-y-5">
                 {project.projectSS.length > 0 ? (
-                  <ProjectGallery images={project.projectSS} title={project.title} />
+                  <ProjectGallery
+                    images={project.projectSS}
+                    title={project.title}
+                  />
                 ) : (
                   project.PhotoUrl && (
                     <div className="relative aspect-video overflow-hidden rounded-2xl border border-border bg-panel-strong">
@@ -99,7 +108,11 @@ export function ProjectDialog({
                 <div className="space-y-2.5">
                   <p className="eyebrow">Open</p>
                   {project.liveLink && (
-                    <Button asChild variant="gradient" className="w-full justify-start">
+                    <Button
+                      asChild
+                      variant="gradient"
+                      className="w-full justify-start"
+                    >
                       <a
                         href={externalHref(project.liveLink)}
                         target="_blank"
@@ -111,7 +124,11 @@ export function ProjectDialog({
                     </Button>
                   )}
                   {project.clientLink && (
-                    <Button asChild variant="outline" className="w-full justify-start">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full justify-start"
+                    >
                       <a
                         href={externalHref(project.clientLink)}
                         target="_blank"
@@ -123,7 +140,11 @@ export function ProjectDialog({
                     </Button>
                   )}
                   {project.serverLink && (
-                    <Button asChild variant="outline" className="w-full justify-start">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full justify-start"
+                    >
                       <a
                         href={externalHref(project.serverLink)}
                         target="_blank"

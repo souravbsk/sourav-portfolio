@@ -14,21 +14,24 @@ import { NextResponse, type NextRequest } from "next/server";
 const SESSION_COOKIES = [
   "authjs.session-token",
   "__Secure-authjs.session-token",
+  "__Host-authjs.session-token",
+  "next-auth.session-token",
+  "__Secure-next-auth.session-token",
 ];
 
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
+  // Never bounce the login page away. A leftover or invalid session cookie
+  // used to send /admin/login → /admin, while the dashboard sent /admin →
+  // /admin/login, which is an infinite 307 loop.
+  if (pathname === "/admin/login") {
+    return NextResponse.next();
+  }
+
   const hasSessionCookie = SESSION_COOKIES.some((name) =>
     Boolean(request.cookies.get(name)?.value),
   );
-
-  if (pathname === "/admin/login") {
-    if (hasSessionCookie) {
-      return NextResponse.redirect(new URL("/admin", request.url));
-    }
-    return NextResponse.next();
-  }
 
   if (!hasSessionCookie) {
     const loginUrl = new URL("/admin/login", request.url);

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowUpRightIcon, ImageIcon, SparklesIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import { cn, truncate } from "@/lib/utils";
+import { cn, stripHtml, truncate } from "@/lib/utils";
 import type { ProjectData } from "@/types/content";
 
 export function ProjectCard({
@@ -90,7 +90,7 @@ export function ProjectCard({
 
             {project.description && (
               <p className="line-clamp-2 text-sm leading-relaxed text-white/70">
-                {truncate(project.description, 110)}
+                {truncate(stripHtml(project.description), 110)}
               </p>
             )}
 

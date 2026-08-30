@@ -26,6 +26,7 @@ import {
   type ProjectCategory,
 } from "@/lib/taxonomy";
 import type { ProjectData } from "@/types/content";
+import { RichTextEditor } from "./rich-text-editor";
 
 type FormState = {
   title: string;
@@ -117,11 +118,10 @@ export function ProjectForm({ project }: { project?: ProjectData }) {
             hint="Shown on the card and in the detail dialog."
             error={errors.description}
           >
-            <Textarea
+            <RichTextEditor
               id="description"
-              rows={5}
               value={form.description}
-              onChange={(event) => set("description", event.target.value)}
+              onChange={(html) => set("description", html)}
               placeholder="What the project does and what you built."
             />
           </Field>
@@ -154,7 +154,11 @@ export function ProjectForm({ project }: { project?: ProjectData }) {
           </Field>
 
           <FieldRow>
-            <Field id="clientLink" label="Client repo" error={errors.clientLink}>
+            <Field
+              id="clientLink"
+              label="Client repo"
+              error={errors.clientLink}
+            >
               <Input
                 id="clientLink"
                 value={form.clientLink}
@@ -163,7 +167,11 @@ export function ProjectForm({ project }: { project?: ProjectData }) {
               />
             </Field>
 
-            <Field id="serverLink" label="Server repo" error={errors.serverLink}>
+            <Field
+              id="serverLink"
+              label="Server repo"
+              error={errors.serverLink}
+            >
               <Input
                 id="serverLink"
                 value={form.serverLink}
@@ -204,7 +212,9 @@ export function ProjectForm({ project }: { project?: ProjectData }) {
           <Field label="Category" error={errors.category}>
             <Select
               value={form.category}
-              onValueChange={(value) => set("category", value as ProjectCategory)}
+              onValueChange={(value) =>
+                set("category", value as ProjectCategory)
+              }
             >
               <SelectTrigger aria-label="Category">
                 <SelectValue />
@@ -235,7 +245,6 @@ export function ProjectForm({ project }: { project?: ProjectData }) {
               </SelectContent>
             </Select>
           </Field>
-
         </div>
       </AdminCard>
 
