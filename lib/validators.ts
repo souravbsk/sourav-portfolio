@@ -52,7 +52,7 @@ export const blogPostCreateSchema = z.object({
   excerpt: z.string().trim().max(400).default(""),
   content: z.string().max(200_000).default(""),
   tags: stringArray,
-  published: z.boolean().default(false),
+  published: z.boolean().default(true),
   publishedAt: z.union([z.string(), z.null()]).optional(),
 });
 

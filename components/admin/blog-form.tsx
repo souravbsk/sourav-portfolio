@@ -41,7 +41,7 @@ export function BlogForm({ post }: { post?: BlogPostData }) {
     excerpt: post?.excerpt ?? "",
     content: post?.content ?? "",
     tags: post?.tags ?? [],
-    published: post?.published ?? false,
+    published: post?.published ?? true,
   });
 
   // The slug stops auto-following the title once the post exists, so an
@@ -226,7 +226,7 @@ export function BlogForm({ post }: { post?: BlogPostData }) {
           <div>
             <p className="font-display text-base font-semibold">Published</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Drafts stay hidden from the public blog until this is on.
+              On: the post appears on the homepage and /blog. Off: draft only.
             </p>
           </div>
           <Switch

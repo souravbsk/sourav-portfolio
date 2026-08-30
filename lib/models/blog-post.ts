@@ -22,7 +22,7 @@ const blogPostSchema = new Schema(
     excerpt: { type: String, default: "", trim: true, maxlength: 400 },
     content: { type: String, default: "" },
     tags: { type: [String], default: [] },
-    published: { type: Boolean, default: false },
+    published: { type: Boolean, default: true },
     publishedAt: { type: Date, default: null },
   },
   { timestamps: true },
