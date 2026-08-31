@@ -28,13 +28,13 @@ export function About({ profile }: { profile: ProfileData }) {
         <div className="mt-8 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           <Reveal direction="right">
             <div className="panel panel-glow relative overflow-hidden p-2">
-              <div className="relative aspect-4/5 overflow-hidden rounded-xl bg-panel-strong">
+              <div className="relative aspect-5/5 overflow-hidden rounded-xl bg-panel-strong">
                 {profile.avatarUrl ? (
                   <Image
                     src={profile.avatarUrl}
                     alt={profile.name}
                     fill
-                    sizes="(max-width: 1024px) 90vw, 420px"
+                    sizes="(max-width: 1024px) 80vw, 420px"
                     className="object-cover object-[center_18%]"
                   />
                 ) : (
