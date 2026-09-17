@@ -66,7 +66,7 @@ export function ProjectGallery({
           <>
             <GalleryArrow direction="prev" onClick={() => step(-1)} />
             <GalleryArrow direction="next" onClick={() => step(1)} />
-            <span className="absolute bottom-3 right-3 rounded-full bg-background/80 px-2.5 py-1 font-mono text-[0.625rem] text-muted-foreground backdrop-blur">
+            <span className="glass absolute bottom-3 right-3 rounded-full px-2.5 py-1 font-mono text-[0.625rem] text-foreground">
               {index + 1} / {count}
             </span>
           </>
@@ -160,7 +160,7 @@ function GalleryArrow({
       onClick={onClick}
       aria-label={direction === "prev" ? "Previous screenshot" : "Next screenshot"}
       className={cn(
-        "absolute top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-border bg-background/85 text-foreground backdrop-blur transition-colors hover:border-cyan-brand/60",
+        "glass absolute top-1/2 grid size-9 -translate-y-1/2 place-items-center rounded-full text-foreground transition-colors hover:border-cyan-brand/50",
         direction === "prev" ? "left-3" : "right-3",
       )}
     >

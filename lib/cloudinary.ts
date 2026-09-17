@@ -29,6 +29,7 @@ export function getCloudinary() {
 export const UPLOAD_FOLDER = process.env.CLOUDINARY_FOLDER || "sourav-portfolio";
 
 export const MAX_UPLOAD_BYTES = 8 * 1024 * 1024;
+export const MAX_RESUME_BYTES = 12 * 1024 * 1024;
 
 export const ALLOWED_UPLOAD_TYPES = [
   "image/png",
@@ -38,6 +39,8 @@ export const ALLOWED_UPLOAD_TYPES = [
   "image/gif",
   "image/svg+xml",
 ];
+
+export const RESUME_PUBLIC_ID = `${UPLOAD_FOLDER}/resume`;
 
 export async function uploadBuffer(
   buffer: Buffer,
@@ -58,6 +61,42 @@ export async function uploadBuffer(
           publicId: result.public_id,
           width: result.width,
           height: result.height,
+        });
+      },
+    );
+
+    stream.end(buffer);
+  });
+}
+
+/**
+ * Always writes to the same Cloudinary public id so a new upload replaces the
+ * previous PDF instead of accumulating files.
+ */
+export async function uploadResumeBuffer(
+  buffer: Buffer,
+): Promise<{ url: string; publicId: string }> {
+  const client = getCloudinary();
+
+  return new Promise((resolve, reject) => {
+    const stream = client.uploader.upload_stream(
+      {
+        public_id: RESUME_PUBLIC_ID,
+        resource_type: "raw",
+        format: "pdf",
+        overwrite: true,
+        invalidate: true,
+        unique_filename: false,
+        use_filename: false,
+      },
+      (error, result) => {
+        if (error || !result) {
+          reject(error ?? new Error("Resume upload failed"));
+          return;
+        }
+        resolve({
+          url: result.secure_url,
+          publicId: result.public_id,
         });
       },
     );

@@ -28,6 +28,7 @@ const cases = [
   ["PATCH", "/api/experience/64b7f1c2a1b2c3d4e5f60718"],
   ["DELETE", "/api/experience/64b7f1c2a1b2c3d4e5f60718"],
   ["POST", "/api/upload"],
+  ["POST", "/api/resume"],
   ["GET", "/api/messages"],
   ["PATCH", "/api/messages/64b7f1c2a1b2c3d4e5f60718"],
   ["DELETE", "/api/messages/64b7f1c2a1b2c3d4e5f60718"],
@@ -39,7 +40,7 @@ for (const [method, route] of cases) {
   const res = await fetch(base + route, {
     method,
     headers: { "content-type": "application/json" },
-    body: method === "GET" || method === "POST" && route === "/api/upload"
+    body: method === "GET" || method === "POST" && (route === "/api/upload" || route === "/api/resume")
       ? undefined
       : JSON.stringify({ title: "unauthorised write attempt" }),
   });

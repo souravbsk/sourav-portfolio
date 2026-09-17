@@ -85,3 +85,13 @@ export async function uploadImages(files: File[], folder?: string) {
     body: form,
   });
 }
+
+export async function uploadResume(file: File) {
+  const form = new FormData();
+  form.append("file", file);
+
+  return apiRequest<{ url: string }>("/api/resume", {
+    method: "POST",
+    body: form,
+  });
+}

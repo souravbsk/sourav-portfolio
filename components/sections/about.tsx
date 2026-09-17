@@ -21,7 +21,7 @@ export function About({ profile }: { profile: ProfileData }) {
   }[];
 
   return (
-    <section id="about" className="scroll-mt-24 py-16 md:py-20">
+    <section id="about" className="scroll-mt-[-4rem] py-16 md:scroll-mt-[-5rem] md:py-20">
       <div className="container-page">
         <SectionHeading eyebrow="01 — About" title="A little context" />
 

@@ -27,7 +27,7 @@ export function Experience({ items }: { items: ExperienceData[] }) {
   if (items.length === 0) return null;
 
   return (
-    <section id="experience" className="scroll-mt-24 py-16 md:py-20">
+    <section id="experience" className="scroll-mt-[-4rem] py-16 md:scroll-mt-[-5rem] md:py-20">
       <div className="container-page">
         <SectionHeading eyebrow="04 — Experience" title="Where I have worked" />
 

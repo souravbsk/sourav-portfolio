@@ -36,7 +36,10 @@ export function Contact({ profile }: { profile: ProfileData }) {
   }[];
 
   return (
-    <section id="contact" className="scroll-mt-24 py-16 md:py-20">
+    <section
+      id="contact"
+      className="min-h-[calc(100dvh-3.5rem)] scroll-mt-[-4rem] py-16 md:scroll-mt-[-5rem] md:py-20"
+    >
       <div className="container-page">
         <SectionHeading
           eyebrow="05 — Contact"

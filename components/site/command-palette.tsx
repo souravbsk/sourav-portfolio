@@ -8,6 +8,7 @@ import {
   FolderIcon,
   MoonIcon,
   PackageIcon,
+  SparklesIcon,
   SunIcon,
 } from "lucide-react";
 
@@ -21,7 +22,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
-import { truncate } from "@/lib/utils";
+import { scrollToHash, truncate } from "@/lib/utils";
 import type { BlogPostData, ProductData, ProjectData } from "@/types/content";
 
 export function CommandPalette({
@@ -31,6 +32,7 @@ export function CommandPalette({
   posts,
   products = [],
   sections,
+  onAskAi,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -38,12 +40,23 @@ export function CommandPalette({
   posts: BlogPostData[];
   products?: ProductData[];
   sections: { href: string; label: string }[];
+  onAskAi?: () => void;
 }) {
   const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
 
   function go(href: string) {
     onOpenChange(false);
+
+    const hashIndex = href.indexOf("#");
+    if (hashIndex !== -1 && window.location.pathname === "/") {
+      const hash = href.slice(hashIndex);
+      if (scrollToHash(hash)) {
+        window.history.pushState(null, "", href.startsWith("/") ? href : `/${href}`);
+        return;
+      }
+    }
+
     router.push(href);
   }
 
@@ -54,6 +67,19 @@ export function CommandPalette({
         <CommandEmpty>Nothing matched that.</CommandEmpty>
 
         <CommandGroup heading="Go to">
+          {onAskAi && (
+            <CommandItem
+              value="ask ai assistant sourav chat"
+              onSelect={() => {
+                onOpenChange(false);
+                onAskAi();
+              }}
+            >
+              <SparklesIcon />
+              <span>Ask Sourav&apos;s AI</span>
+              <CommandShortcut>⌘J</CommandShortcut>
+            </CommandItem>
+          )}
           {sections.map((section) => (
             <CommandItem
               key={section.href}

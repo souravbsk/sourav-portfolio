@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { ArrowRightIcon, DownloadIcon, FileTextIcon } from "lucide-react";
 
+import { Magnetic } from "@/components/motion/magnetic";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { TiltFrame } from "@/components/motion/tilt-frame";
 import { Typewriter } from "@/components/motion/typewriter";
 import { HashLink } from "@/components/site/hash-link";
 import { SocialIcon } from "@/components/site/social-icon";
 import { HeroVisual } from "@/components/three/hero-visual";
+import { AssistantHeroCard } from "@/components/assistant/assistant-hero-card";
 import { Button } from "@/components/ui/button";
 import { externalHref } from "@/lib/utils";
 import type { ProfileData } from "@/types/content";
@@ -55,28 +58,34 @@ export function Hero({ profile }: { profile: ProfileData }) {
 
             <Reveal direction="right" delay={0.24} className="mt-8">
               <div className="flex flex-wrap items-center gap-3">
-                <Button asChild variant="gradient" size="lg">
-                  <Link href="/resume">
-                    <FileTextIcon />
-                    View resume
-                  </Link>
-                </Button>
+                <Magnetic>
+                  <Button asChild variant="gradient" size="lg">
+                    <Link href="/resume">
+                      <FileTextIcon />
+                      View resume
+                    </Link>
+                  </Button>
+                </Magnetic>
 
                 {profile.resumeFileUrl && (
-                  <Button asChild variant="outline" size="lg">
-                    <a href={profile.resumeFileUrl} download>
-                      <DownloadIcon />
-                      Download
-                    </a>
-                  </Button>
+                  <Magnetic strength={0.22}>
+                    <Button asChild variant="outline" size="lg">
+                      <a href={profile.resumeFileUrl} download>
+                        <DownloadIcon />
+                        Download
+                      </a>
+                    </Button>
+                  </Magnetic>
                 )}
 
-                <Button asChild variant="ghost" size="lg">
-                  <HashLink href="#contact">
-                    Get in touch
-                    <ArrowRightIcon />
-                  </HashLink>
-                </Button>
+                <Magnetic strength={0.22}>
+                  <Button asChild variant="ghost" size="lg">
+                    <HashLink href="#contact">
+                      Get in touch
+                      <ArrowRightIcon />
+                    </HashLink>
+                  </Button>
+                </Magnetic>
               </div>
             </Reveal>
 
@@ -97,8 +106,11 @@ export function Hero({ profile }: { profile: ProfileData }) {
             </RevealGroup>
           </div>
 
-          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <HeroVisual />
+          <div className="order-1 flex w-full flex-col items-center gap-4 lg:order-2 lg:items-end">
+            <TiltFrame className="w-full max-w-md md:max-w-lg lg:max-w-xl">
+              <HeroVisual />
+            </TiltFrame>
+            <AssistantHeroCard />
           </div>
         </div>
 

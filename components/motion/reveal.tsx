@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 type Direction = "up" | "down" | "left" | "right" | "none";
 
 const OFFSET: Record<Direction, { x: number; y: number }> = {
-  up: { x: 0, y: 22 },
-  down: { x: 0, y: -22 },
-  left: { x: 26, y: 0 },
-  right: { x: -26, y: 0 },
+  up: { x: 0, y: 36 },
+  down: { x: 0, y: -28 },
+  left: { x: 32, y: 0 },
+  right: { x: -32, y: 0 },
   none: { x: 0, y: 0 },
 };
 
@@ -48,11 +48,12 @@ export function Reveal({
         visible: { opacity: 1 },
       }
     : {
-        hidden: { opacity: 0, x: offset.x, y: offset.y },
+        hidden: { opacity: 0, x: offset.x, y: offset.y, scale: 0.98 },
         visible: {
           opacity: 1,
           x: 0,
           y: 0,
+          scale: 1,
           transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
         },
       };

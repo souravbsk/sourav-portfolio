@@ -59,11 +59,26 @@ export function stripHtml(html: string) {
     .trim();
 }
 
-/** Same-page section jump. Next.js Link skips CSS `scroll-behavior: smooth`. */
+/**
+ * Same-page section jump. Aligns the heading — not the section's empty
+ * padding — just under the sticky header so the previous block is gone.
+ */
 export function scrollToHash(hash: string) {
   const id = hash.replace(/^[#/]+/, "");
   const node = document.getElementById(id);
   if (!node) return false;
-  node.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const header = document.querySelector("header");
+  const navOffset = (header?.getBoundingClientRect().bottom ?? 56) + 12;
+  const paddingTop = Number.parseFloat(getComputedStyle(node).paddingTop) || 0;
+  const top = Math.max(
+    0,
+    window.scrollY + node.getBoundingClientRect().top + paddingTop - navOffset,
+  );
+
+  const html = document.documentElement;
+  html.style.setProperty("scroll-behavior", "auto", "important");
+  window.scrollTo({ top, behavior: "instant" });
+  html.style.removeProperty("scroll-behavior");
   return true;
 }

@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { AdminCard } from "@/components/admin/admin-page";
 import { Field, FieldRow } from "@/components/admin/field";
 import { ImageUploader } from "@/components/admin/image-uploader";
+import { ResumeUploader } from "@/components/admin/resume-uploader";
 import { TagInput } from "@/components/admin/tag-input";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -280,19 +281,19 @@ export function ProfileForm({ profile }: { profile: ProfileData }) {
 
       <AdminCard
         title="Resume"
-        description="The /resume page is a formatted document. Experience and skills come from their own dashboard pages; education, languages and courses are edited here."
+        description="Uploading a PDF replaces the previous file and updates /resume immediately. Education, languages and courses are edited here; experience and skills have their own pages."
       >
         <div className="space-y-5">
           <Field
-            id="resumeFileUrl"
-            label="Resume PDF URL"
-            hint="Optional download. A path like /resume/your-resume.pdf, or an uploaded file URL."
+            id="resumeFile"
+            label="Resume PDF"
+            hint="Only the latest file is kept. Upload again to replace it."
             error={errors.resumeFileUrl}
           >
-            <Input
-              id="resumeFileUrl"
+            <ResumeUploader
+              id="resumeFile"
               value={form.resumeFileUrl}
-              onChange={(event) => set("resumeFileUrl", event.target.value)}
+              onChange={(url) => set("resumeFileUrl", url)}
             />
           </Field>
 

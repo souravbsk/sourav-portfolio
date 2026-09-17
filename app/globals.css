@@ -45,8 +45,8 @@
   --brand-warm: #b8611a;
 
   --grid-line: rgb(10 16 32 / 0.06);
-  --glow-cyan: rgb(15 155 144 / 0.16);
-  --glow-violet: rgb(107 75 216 / 0.16);
+  --glow-cyan: rgb(15 155 144 / 0.22);
+  --glow-violet: rgb(107 75 216 / 0.22);
 }
 
 /* ---------------------------------------------------------------------------
@@ -88,8 +88,8 @@
   --brand-warm: #ffb673;
 
   --grid-line: rgb(142 160 196 / 0.07);
-  --glow-cyan: rgb(63 230 214 / 0.14);
-  --glow-violet: rgb(156 124 255 / 0.16);
+  --glow-cyan: rgb(63 230 214 / 0.22);
+  --glow-violet: rgb(156 124 255 / 0.24);
 }
 
 @theme inline {
@@ -138,13 +138,29 @@
 
   html {
     scroll-behavior: smooth;
-    /* Offset anchor scrolling so the slim sticky header never covers a heading. */
-    scroll-padding-top: 6rem;
+    /* Header is h-14; extra rem is the gap under it. Section padding is
+       skipped via negative scroll-margin on each homepage block. */
+    scroll-padding-top: 4.75rem;
     -webkit-text-size-adjust: 100%;
+    --pointer-x: 70vw;
+    --pointer-y: 18vh;
   }
 
   body {
     background-color: var(--background);
+    background-image:
+      radial-gradient(
+        640px circle at var(--pointer-x, 70vw) var(--pointer-y, 18vh),
+        var(--glow-cyan),
+        transparent 58%
+      ),
+      radial-gradient(
+        480px circle at calc(var(--pointer-x, 70vw) + 120px)
+          calc(var(--pointer-y, 18vh) + 90px),
+        var(--glow-violet),
+        transparent 62%
+      );
+    background-attachment: fixed;
     color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -195,6 +211,10 @@
       scroll-behavior: auto;
     }
 
+    body {
+      background-image: none;
+    }
+
     *,
     *::before,
     *::after {
@@ -227,6 +247,87 @@
     background-size: 56px 56px;
   }
 
+  .motion-pointer-cyan,
+  .motion-pointer-violet {
+    position: absolute;
+    inset: 0;
+  }
+
+  .motion-pointer-cyan {
+    background: radial-gradient(
+      560px circle at var(--pointer-x, 70%) var(--pointer-y, 18%),
+      var(--glow-cyan),
+      transparent 58%
+    );
+  }
+
+  .motion-pointer-violet {
+    background: radial-gradient(
+      420px circle at calc(var(--pointer-x, 70%) + 90px)
+        calc(var(--pointer-y, 18%) + 70px),
+      var(--glow-violet),
+      transparent 64%
+    );
+  }
+
+  .motion-grid {
+    position: absolute;
+    inset: -20% 0;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 50% 20%, black, transparent 72%);
+    opacity: 0.55;
+  }
+
+  .motion-orb {
+    position: absolute;
+    width: min(28rem, 70vw);
+    height: min(28rem, 70vw);
+    border-radius: 999px;
+    filter: blur(72px);
+    opacity: 0.38;
+  }
+
+  .motion-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: -0.875rem 0 0 -0.875rem;
+    border: 1px solid color-mix(in oklab, var(--brand-cyan) 70%, transparent);
+    border-radius: 999px;
+    pointer-events: none;
+    transform: translate3d(var(--pointer-x, 70vw), var(--pointer-y, 18vh), 0);
+    opacity: 0.55;
+  }
+
+  .motion-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-cyan), var(--brand-violet));
+    transform-origin: 0 50%;
+    pointer-events: none;
+  }
+
+  .motion-orb-cyan {
+    top: 6%;
+    left: -10%;
+    background: var(--brand-cyan);
+  }
+
+  .motion-orb-violet {
+    top: 42%;
+    right: -12%;
+    background: var(--brand-violet);
+  }
+
   .text-gradient {
     background-image: linear-gradient(
       100deg,
@@ -249,6 +350,18 @@
     background-color: var(--panel);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
+  }
+
+  .glass {
+    border: 1px solid rgb(255 255 255 / 0.16);
+    background: rgb(12 18 36 / 0.42);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  :root:not(.dark) .glass {
+    border-color: rgb(10 16 32 / 0.08);
+    background: rgb(255 255 255 / 0.72);
   }
 
   /* Gradient hairline border that survives both themes. */
@@ -429,6 +542,71 @@
   50% {
     transform: rotate(6deg) translateX(3px);
   }
+}
+
+@keyframes assistant-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgb(63 230 214 / 0.35);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 10px rgb(63 230 214 / 0);
+  }
+}
+
+/* Rich-text project copy in the glass popup. Force readable color even if the
+   editor saved black inline styles meant for a light admin canvas. */
+.prose-project,
+.prose-project * {
+  color: var(--foreground) !important;
+}
+
+.prose-project a {
+  color: var(--brand-cyan) !important;
+}
+
+.prose-assistant {
+  font-size: 0.925rem;
+  line-height: 1.65;
+}
+
+.prose-assistant > * + * {
+  margin-top: 0.7em;
+}
+
+.prose-assistant p {
+  margin: 0;
+}
+
+.prose-assistant p + p {
+  margin-top: 0.7em;
+}
+
+.prose-assistant a {
+  color: var(--brand-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-assistant ul,
+.prose-assistant ol {
+  padding-left: 1.15rem;
+}
+
+.prose-assistant ul {
+  list-style: disc;
+}
+
+.prose-assistant ol {
+  list-style: decimal;
+}
+
+.prose-assistant code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--panel-strong);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
 }
 
 /* The resume page doubles as its own print stylesheet. */
