@@ -1,3 +1,5 @@
+import { revalidatePath } from "next/cache";
+
 import { jsonOk, parseBody, route } from "@/lib/api";
 import { getProfile } from "@/lib/content";
 import { serialize } from "@/lib/db";
@@ -16,6 +18,9 @@ export const PATCH = route(async (request: Request) => {
     { $set: payload },
     { new: true, upsert: true, runValidators: true, setDefaultsOnInsert: true },
   ).lean();
+
+  revalidatePath("/");
+  revalidatePath("/resume");
 
   return jsonOk(serialize(updated));
 }, { admin: true });

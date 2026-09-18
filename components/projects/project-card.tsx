@@ -35,11 +35,13 @@ export function ProjectCard({
   onOpen,
   priority = false,
   index = 0,
+  fitLabel,
 }: {
   project: ProjectData;
   onOpen: (project: ProjectData) => void;
   priority?: boolean;
   index?: number;
+  fitLabel?: string;
 }) {
   const isSpecial = project.status === "special";
   const visibleSkills = project.skills.slice(0, 4);
@@ -58,6 +60,7 @@ export function ProjectCard({
         "shadow-[0_18px_50px_-28px_rgb(6_11_24/0.55)] transition-[transform,box-shadow] duration-500",
         "hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-24px_rgb(15_155_144/0.28)]",
         isSpecial && "ring-1 ring-violet-brand/35",
+        fitLabel === "Strong fit" && "ring-1 ring-cyan-brand/45",
       )}
     >
       <span
@@ -82,6 +85,11 @@ export function ProjectCard({
         className="glass relative flex flex-1 flex-col gap-3 border-t border-white/10 p-4 text-left"
         aria-label={`Open details for ${project.title}`}
       >
+        {fitLabel && (
+          <span className="inline-flex w-fit items-center rounded-full border border-cyan-brand/30 bg-cyan-brand/15 px-2.5 py-0.5 font-mono text-[0.625rem] tracking-wide text-cyan-brand">
+            {fitLabel}
+          </span>
+        )}
         {isSpecial && (
           <span className="inline-flex w-fit items-center gap-1 rounded-full border border-violet-brand/30 bg-violet-brand/15 px-2.5 py-0.5 font-mono text-[0.625rem] tracking-wide text-violet-brand">
             <SparklesIcon className="size-3" />

@@ -25,3 +25,6 @@ export type { ExperienceDoc } from "./experience";
 
 export { Message } from "./message";
 export type { MessageDoc } from "./message";
+
+export { ResumeFile } from "./resume-file";
+export type { ResumeFileDoc } from "./resume-file";

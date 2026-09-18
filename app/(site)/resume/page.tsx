@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ResumeContactRail } from "@/components/resume/resume-contact-rail";
 import { ResumeViewerClient } from "@/components/resume/resume-viewer-client";
 import { getProfile } from "@/lib/content";
+import { resumeViewHref } from "@/lib/resume";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +32,7 @@ export default async function ResumePage() {
         <ResumeContactRail profile={profile} />
 
         {profile.resumeFileUrl ? (
-          <ResumeViewerClient fileUrl={profile.resumeFileUrl} />
+          <ResumeViewerClient fileUrl={resumeViewHref(profile.resumeFileUrl)} />
         ) : (
           <div className="panel grid min-h-80 place-items-center p-8 text-center text-sm text-muted-foreground">
             Upload a resume PDF in the dashboard to preview it here.

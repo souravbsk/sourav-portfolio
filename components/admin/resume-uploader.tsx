@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { FileTextIcon, LoaderIcon, UploadIcon } from "lucide-react";
 import { toast } from "sonner";
 
@@ -27,6 +28,7 @@ export function ResumeUploader({
   onChange: (url: string) => void;
   id?: string;
 }) {
+  const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [dragging, setDragging] = useState(false);
@@ -40,6 +42,7 @@ export function ResumeUploader({
       const result = await uploadResume(file);
       onChange(result.url);
       toast.success("Latest resume saved — previous file replaced");
+      router.refresh();
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Upload failed");
     } finally {

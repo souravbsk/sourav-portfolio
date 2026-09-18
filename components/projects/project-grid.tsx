@@ -5,6 +5,8 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
 import { ProjectCard } from "@/components/projects/project-card";
 import { ProjectDialog } from "@/components/projects/project-dialog";
+import { RoleFitBar } from "@/components/projects/role-fit-bar";
+import { fitLabel, matchRoleToProjects, type RoleFitResult } from "@/lib/role-fit";
 import { cn } from "@/lib/utils";
 import type { ProjectData } from "@/types/content";
 
@@ -13,6 +15,7 @@ export function ProjectGrid({
   limit,
   openId,
   showFilter = false,
+  showRoleFit = false,
 }: {
   projects: ProjectData[];
   limit?: number;
@@ -20,8 +23,11 @@ export function ProjectGrid({
   openId?: string;
   /** Tech-stack chips. Off on the landing Work strip; on for the archive. */
   showFilter?: boolean;
+  /** Recruiter paste-a-JD matcher. Rare on personal sites; on for Work. */
+  showRoleFit?: boolean;
 }) {
   const [skill, setSkill] = useState("all");
+  const [fit, setFit] = useState<RoleFitResult | null>(null);
   const prefersReducedMotion = useReducedMotion();
 
   // The open project is derived from an id rather than held as its own copy of
@@ -52,8 +58,17 @@ export function ProjectGrid({
         : projects.filter((project) =>
             project.skills.some((item) => item === skill),
           );
-    return limit ? filtered.slice(0, limit) : filtered;
-  }, [limit, projects, skill]);
+
+    const ranked = fit
+      ? [...filtered].sort((a, b) => {
+          const scoreA = fit.ranked.find((row) => row.id === a._id)?.score ?? -1;
+          const scoreB = fit.ranked.find((row) => row.id === b._id)?.score ?? -1;
+          return scoreB - scoreA;
+        })
+      : filtered;
+
+    return limit ? ranked.slice(0, limit) : ranked;
+  }, [fit, limit, projects, skill]);
 
   if (projects.length === 0) {
     return (
@@ -67,6 +82,14 @@ export function ProjectGrid({
 
   return (
     <>
+      {showRoleFit && (
+        <RoleFitBar
+          result={fit}
+          onMatch={(query) => setFit(matchRoleToProjects(query, projects))}
+          onClear={() => setFit(null)}
+        />
+      )}
+
       {showFilter && skills.length > 1 && (
         <div
           role="tablist"
@@ -112,15 +135,33 @@ export function ProjectGrid({
               key={project._id}
               layout={!prefersReducedMotion}
               initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
               exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+              className={
+                fit && !fit.ranked.some((row) => row.id === project._id)
+                  ? "opacity-45"
+                  : undefined
+              }
             >
               <ProjectCard
                 project={project}
                 onOpen={(item) => setOpenedId(item._id)}
                 priority={index < 3}
                 index={index}
+                fitLabel={
+                  fit
+                    ? (() => {
+                        const score = fit.ranked.find(
+                          (row) => row.id === project._id,
+                        )?.score;
+                        return score ? fitLabel(score) : undefined;
+                      })()
+                    : undefined
+                }
               />
             </motion.div>
           ))}

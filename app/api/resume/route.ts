@@ -4,6 +4,8 @@ import { ApiError, jsonOk, route } from "@/lib/api";
 import { MAX_RESUME_BYTES, uploadResumeBuffer } from "@/lib/cloudinary";
 import { serialize } from "@/lib/db";
 import { Profile } from "@/lib/models";
+import { RESUME_FILE_PATH } from "@/lib/resume";
+import { saveResumePdf } from "@/lib/resume-store";
 
 function isPdf(file: File) {
   return (
@@ -13,9 +15,9 @@ function isPdf(file: File) {
 }
 
 /**
- * Admin-only PDF upload. Always writes to the same Cloudinary public id and
- * the same Profile.resumeFileUrl field, so a new file replaces the previous
- * one instead of accumulating history.
+ * Admin-only PDF upload. The file is stored in MongoDB and served from
+ * /api/resume/file. Cloudinary is optional extra storage and must not block
+ * the dashboard upload if raw PDF delivery is misconfigured.
  */
 export const POST = route(async (request: Request) => {
   let form: FormData;
@@ -42,7 +44,18 @@ export const POST = route(async (request: Request) => {
   }
 
   const buffer = Buffer.from(await file.arrayBuffer());
-  const { url } = await uploadResumeBuffer(buffer);
+  await saveResumePdf(buffer, file.name || "resume.pdf");
+
+  const url = `${RESUME_FILE_PATH}?t=${Date.now()}`;
+
+  try {
+    await uploadResumeBuffer(buffer);
+  } catch (error) {
+    console.warn(
+      "[resume] Cloudinary copy skipped:",
+      error instanceof Error ? error.message : error,
+    );
+  }
 
   const updated = await Profile.findOneAndUpdate(
     { key: "primary" },

@@ -95,7 +95,9 @@ export async function uploadResumeBuffer(
           return;
         }
         resolve({
-          url: result.secure_url,
+          url: result.version
+            ? `${result.secure_url}?v=${result.version}`
+            : result.secure_url,
           publicId: result.public_id,
         });
       },

@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { resumeDownloadHref } from "@/lib/resume";
 import { externalHref } from "@/lib/utils";
 import type { ProfileData } from "@/types/content";
 
@@ -76,7 +77,7 @@ export function ResumeContactRail({ profile }: { profile: ProfileData }) {
 
         {profile.resumeFileUrl && (
           <Button asChild variant="gradient" className="mt-5 w-full">
-            <a href={profile.resumeFileUrl} download>
+            <a href={resumeDownloadHref(profile.resumeFileUrl)}>
               <DownloadIcon />
               Download PDF
             </a>

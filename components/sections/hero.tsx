@@ -10,6 +10,7 @@ import { SocialIcon } from "@/components/site/social-icon";
 import { HeroVisual } from "@/components/three/hero-visual";
 import { AssistantHeroCard } from "@/components/assistant/assistant-hero-card";
 import { Button } from "@/components/ui/button";
+import { resumeDownloadHref } from "@/lib/resume";
 import { externalHref } from "@/lib/utils";
 import type { ProfileData } from "@/types/content";
 
@@ -70,7 +71,7 @@ export function Hero({ profile }: { profile: ProfileData }) {
                 {profile.resumeFileUrl && (
                   <Magnetic strength={0.22}>
                     <Button asChild variant="outline" size="lg">
-                      <a href={profile.resumeFileUrl} download>
+                      <a href={resumeDownloadHref(profile.resumeFileUrl)}>
                         <DownloadIcon />
                         Download
                       </a>

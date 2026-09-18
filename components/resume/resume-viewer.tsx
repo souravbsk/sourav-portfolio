@@ -30,16 +30,11 @@ export function ResumeViewer({ fileUrl }: { fileUrl: string }) {
 
   if (failed) {
     return (
-      <div className="panel grid min-h-80 place-items-center p-8 text-center">
-        <p className="text-sm text-muted-foreground">
-          The PDF could not be previewed in this browser.
-        </p>
-        <Button asChild variant="outline" className="mt-4">
-          <a href={fileUrl} target="_blank" rel="noreferrer">
-            Open the file
-          </a>
-        </Button>
-      </div>
+      <iframe
+        title="Resume PDF"
+        src={fileUrl}
+        className="min-h-[80vh] w-full rounded-2xl border border-border bg-panel"
+      />
     );
   }
 
@@ -50,6 +45,7 @@ export function ResumeViewer({ fileUrl }: { fileUrl: string }) {
         className="overflow-hidden rounded-2xl border border-border bg-panel-strong/40 shadow-[0_20px_60px_-28px_rgba(15,20,40,0.45)]"
       >
         <Document
+          key={fileUrl}
           file={fileUrl}
           loading={
             <div className="grid min-h-80 place-items-center text-muted-foreground">
