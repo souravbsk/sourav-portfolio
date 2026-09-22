@@ -1,4 +1,4 @@
-import { ApiError, route } from "@/lib/api";
+import { connectToDatabase } from "@/lib/db";
 import { getProfile } from "@/lib/content";
 import {
   fetchRemotePdf,
@@ -8,6 +8,8 @@ import {
 
 export const dynamic = "force-dynamic";
 
+const STORE_TIMEOUT_MS = 4000;
+
 function pdfHeaders(download: boolean) {
   return {
     "Content-Type": "application/pdf",
@@ -16,26 +18,54 @@ function pdfHeaders(download: boolean) {
   };
 }
 
-/**
- * Public PDF stream for /resume. Prefers the Mongo copy from the dashboard
- * upload, then the bundled public file, then a Cloudinary URL if one exists.
- */
-export const GET = route(async (request: Request) => {
-  const download = new URL(request.url).searchParams.get("download") === "1";
+function withTimeout<T>(promise: Promise<T>, ms: number) {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("resume store timeout")), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      (error) => {
+        clearTimeout(timer);
+        reject(error);
+      },
+    );
+  });
+}
 
+async function loadUploadedResume() {
+  await connectToDatabase();
   const stored = await loadStoredResumePdf();
-  if (stored) {
-    return new Response(stored, { headers: pdfHeaders(download) });
-  }
+  if (stored) return stored;
 
   const profile = await getProfile();
   const source = profile.resumeFileUrl?.trim() ?? "";
-
   if (source.startsWith("https://")) {
-    const remote = await fetchRemotePdf(source);
-    if (remote) {
-      return new Response(remote, { headers: pdfHeaders(download) });
+    return fetchRemotePdf(source);
+  }
+  return null;
+}
+
+/**
+ * Public PDF stream for /resume. Mongo first, then Cloudinary, then the
+ * bundled file. If the serverless filesystem cannot read /public, redirect
+ * to the static URL instead of fetching this origin (that deadlocks in dev).
+ */
+export async function GET(request: Request) {
+  const { origin, searchParams } = new URL(request.url);
+  const download = searchParams.get("download") === "1";
+
+  try {
+    const stored = await withTimeout(loadUploadedResume(), STORE_TIMEOUT_MS);
+    if (stored) {
+      return new Response(stored, { headers: pdfHeaders(download) });
     }
+  } catch (error) {
+    console.warn(
+      "[resume] stored resume unavailable:",
+      error instanceof Error ? error.message : error,
+    );
   }
 
   const bundled = await loadBundledResumePdf();
@@ -43,5 +73,5 @@ export const GET = route(async (request: Request) => {
     return new Response(bundled, { headers: pdfHeaders(download) });
   }
 
-  throw new ApiError(404, "No resume uploaded");
-});
+  return Response.redirect(`${origin}/resume/sourav-basak-resume.pdf`, 302);
+}

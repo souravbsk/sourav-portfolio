@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
     ],
   },
   serverExternalPackages: ["mongoose", "pdfjs-dist"],
+  outputFileTracingIncludes: {
+    "/api/resume/file": ["./public/resume/sourav-basak-resume.pdf"],
+  },
 };
 
 export default nextConfig;

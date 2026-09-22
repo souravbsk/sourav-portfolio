@@ -21,7 +21,6 @@ const RECOMMENDED = [
   ["CLOUDINARY_CLOUD_NAME", "image uploads"],
   ["CLOUDINARY_API_KEY", "image uploads"],
   ["CLOUDINARY_API_SECRET", "image uploads"],
-  ["GEMINI_API_KEY", "portfolio AI chat"],
 ] as const;
 
 let reported = false;

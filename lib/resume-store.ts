@@ -19,7 +19,7 @@ export async function saveResumePdf(data: Buffer, filename = "resume.pdf") {
 }
 
 export async function loadStoredResumePdf(): Promise<Buffer | null> {
-  const doc = await ResumeFile.findOne({ key: "primary" }).lean();
+  const doc = await ResumeFile.findOne({ key: "primary" });
   const buf = toPdfBuffer(doc?.data);
   return buf?.length ? buf : null;
 }

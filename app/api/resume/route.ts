@@ -46,10 +46,10 @@ export const POST = route(async (request: Request) => {
   const buffer = Buffer.from(await file.arrayBuffer());
   await saveResumePdf(buffer, file.name || "resume.pdf");
 
-  const url = `${RESUME_FILE_PATH}?t=${Date.now()}`;
-
+  let url = `${RESUME_FILE_PATH}?t=${Date.now()}`;
   try {
-    await uploadResumeBuffer(buffer);
+    const uploaded = await uploadResumeBuffer(buffer);
+    if (uploaded.url) url = uploaded.url;
   } catch (error) {
     console.warn(
       "[resume] Cloudinary copy skipped:",

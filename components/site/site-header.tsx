@@ -4,14 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
-import { MenuIcon, SearchIcon, SparklesIcon } from "lucide-react";
+import { MenuIcon, SearchIcon } from "lucide-react";
 
 import { CommandPalette } from "@/components/site/command-palette";
 import { HashLink } from "@/components/site/hash-link";
 import { ProductsMenu } from "@/components/site/products-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { AssistantHeaderButton } from "@/components/assistant/assistant-hero-card";
-import { useAssistant } from "@/components/assistant/assistant-provider";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -44,7 +42,6 @@ export function SiteHeader({
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
-  const { setOpen: setAssistantOpen } = useAssistant();
 
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, {
@@ -125,8 +122,6 @@ export function SiteHeader({
           </nav>
 
           <div className="flex items-center gap-2">
-            <AssistantHeaderButton />
-
             <button
               type="button"
               onClick={() => setPaletteOpen(true)}
@@ -207,18 +202,8 @@ export function SiteHeader({
                   )}
                 </nav>
                 <Button
-                  variant="gradient"
-                  className="mt-auto"
-                  onClick={() => {
-                    setMobileOpen(false);
-                    setAssistantOpen(true);
-                  }}
-                >
-                  <SparklesIcon />
-                  Ask Sourav&apos;s AI
-                </Button>
-                <Button
                   variant="outline"
+                  className="mt-auto"
                   onClick={() => {
                     setMobileOpen(false);
                     setPaletteOpen(true);
@@ -244,7 +229,6 @@ export function SiteHeader({
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
-        onAskAi={() => setAssistantOpen(true)}
         projects={projects}
         posts={posts}
         products={products}

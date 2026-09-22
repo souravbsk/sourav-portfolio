@@ -8,7 +8,6 @@ import {
   FolderIcon,
   MoonIcon,
   PackageIcon,
-  SparklesIcon,
   SunIcon,
 } from "lucide-react";
 
@@ -32,7 +31,6 @@ export function CommandPalette({
   posts,
   products = [],
   sections,
-  onAskAi,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -40,7 +38,6 @@ export function CommandPalette({
   posts: BlogPostData[];
   products?: ProductData[];
   sections: { href: string; label: string }[];
-  onAskAi?: () => void;
 }) {
   const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
@@ -67,19 +64,6 @@ export function CommandPalette({
         <CommandEmpty>Nothing matched that.</CommandEmpty>
 
         <CommandGroup heading="Go to">
-          {onAskAi && (
-            <CommandItem
-              value="ask ai assistant sourav chat"
-              onSelect={() => {
-                onOpenChange(false);
-                onAskAi();
-              }}
-            >
-              <SparklesIcon />
-              <span>Ask Sourav&apos;s AI</span>
-              <CommandShortcut>⌘J</CommandShortcut>
-            </CommandItem>
-          )}
           {sections.map((section) => (
             <CommandItem
               key={section.href}

@@ -162,12 +162,3 @@ export const contactSchema = z.object({
   // Never filled by a human; a value here means a bot walked the form.
   honeypot: z.string().max(0).optional(),
 });
-
-export const assistantMessageSchema = z.object({
-  role: z.enum(["user", "assistant"]),
-  content: z.string().trim().min(1).max(1200),
-});
-
-export const assistantChatSchema = z.object({
-  messages: z.array(assistantMessageSchema).min(1).max(12),
-});

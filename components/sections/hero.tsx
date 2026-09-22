@@ -8,7 +8,6 @@ import { Typewriter } from "@/components/motion/typewriter";
 import { HashLink } from "@/components/site/hash-link";
 import { SocialIcon } from "@/components/site/social-icon";
 import { HeroVisual } from "@/components/three/hero-visual";
-import { AssistantHeroCard } from "@/components/assistant/assistant-hero-card";
 import { Button } from "@/components/ui/button";
 import { resumeDownloadHref } from "@/lib/resume";
 import { externalHref } from "@/lib/utils";
@@ -111,7 +110,6 @@ export function Hero({ profile }: { profile: ProfileData }) {
             <TiltFrame className="w-full max-w-md md:max-w-lg lg:max-w-xl">
               <HeroVisual />
             </TiltFrame>
-            <AssistantHeroCard />
           </div>
         </div>
 

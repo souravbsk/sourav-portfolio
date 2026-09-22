@@ -1,7 +1,6 @@
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { HashScroll } from "@/components/site/hash-scroll";
-import { AssistantShell } from "@/components/assistant/assistant-shell";
 import { MotionStage } from "@/components/motion/motion-stage";
 import { getPosts, getProducts, getProfile, getProjects } from "@/lib/content";
 
@@ -20,7 +19,7 @@ export default async function SiteLayout({
   ]);
 
   return (
-    <AssistantShell>
+    <>
       <MotionStage />
       <HashScroll />
       <div className="relative z-10 flex min-h-dvh flex-col">
@@ -30,6 +29,6 @@ export default async function SiteLayout({
         </main>
         <SiteFooter profile={profile} />
       </div>
-    </AssistantShell>
+    </>
   );
 }
