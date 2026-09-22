@@ -29,8 +29,9 @@ function toPdfBuffer(value: unknown): Buffer | null {
   if (Buffer.isBuffer(value)) return value;
   if (value instanceof Uint8Array) return Buffer.from(value);
   if (typeof value === "object" && value && "buffer" in value) {
-    const inner = (value as { buffer: ArrayBuffer | Uint8Array }).buffer;
-    if (inner) return Buffer.from(inner);
+    const inner = (value as { buffer?: unknown }).buffer;
+    if (inner instanceof Uint8Array) return Buffer.from(inner);
+    if (inner instanceof ArrayBuffer) return Buffer.from(new Uint8Array(inner));
   }
   if (
     typeof value === "object" &&

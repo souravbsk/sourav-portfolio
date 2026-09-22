@@ -18,6 +18,10 @@ function pdfHeaders(download: boolean) {
   };
 }
 
+function pdfResponse(data: Buffer, download: boolean) {
+  return new Response(Uint8Array.from(data), { headers: pdfHeaders(download) });
+}
+
 function withTimeout<T>(promise: Promise<T>, ms: number) {
   return new Promise<T>((resolve, reject) => {
     const timer = setTimeout(() => reject(new Error("resume store timeout")), ms);
@@ -59,7 +63,7 @@ export async function GET(request: Request) {
   try {
     const stored = await withTimeout(loadUploadedResume(), STORE_TIMEOUT_MS);
     if (stored) {
-      return new Response(stored, { headers: pdfHeaders(download) });
+      return pdfResponse(stored, download);
     }
   } catch (error) {
     console.warn(
@@ -70,7 +74,7 @@ export async function GET(request: Request) {
 
   const bundled = await loadBundledResumePdf();
   if (bundled) {
-    return new Response(bundled, { headers: pdfHeaders(download) });
+    return pdfResponse(bundled, download);
   }
 
   return Response.redirect(`${origin}/resume/sourav-basak-resume.pdf`, 302);
